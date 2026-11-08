@@ -1,0 +1,219 @@
+{
+  "benchmark_platform": "macOS-26.6-arm64-arm-64bit",
+  "distinct_read_keys": 23803,
+  "model_file": "twitter-cluster052-reuse-v1.txt",
+  "model_sha256": "7acba094005c67752591283d1e597e2f9673cf1f54cb59f2b5a87937fb87d60c",
+  "operations": {
+    "get": 99284,
+    "set": 716
+  },
+  "read_count": 99284,
+  "read_timestamp_range_seconds": [
+    0,
+    33
+  ],
+  "replays": [
+    {
+      "backend": "temporary_sqlite",
+      "capacity_items": 128,
+      "delay_sweep": [
+        {
+          "added_fetch_delay_us": 0,
+          "median_paired_mean_delta_us": 0.0186399873,
+          "median_paired_p95_delta_us": 0.041,
+          "paired_mean_deltas_us": [
+            0.0156214899,
+            0.0208614983,
+            0.0164335542,
+            0.0208464204
+          ],
+          "paired_p95_deltas_us": [
+            0.041,
+            0.041,
+            0.041,
+            0.041
+          ],
+          "results": [
+            {
+              "backend_calls": 64652,
+              "mean_latency_us": 0.377003158,
+              "median_injected_us_per_fetch": 0,
+              "model_calls": 0,
+              "p50_latency_us": 0.5,
+              "p95_latency_us": 0.667,
+              "policy": "sieve"
+            },
+            {
+              "backend_calls": 64512,
+              "mean_latency_us": 0.39554397,
+              "median_injected_us_per_fetch": 0,
+              "model_calls": 38611,
+              "p50_latency_us": 0.541,
+              "p95_latency_us": 0.708,
+              "policy": "cachetriage"
+            }
+          ]
+        },
+        {
+          "added_fetch_delay_us": 10,
+          "median_paired_mean_delta_us": 0.00310732344,
+          "median_paired_p95_delta_us": 0.041,
+          "paired_mean_deltas_us": [
+            -0.0513909089,
+            0.0218179969,
+            0.00777785947,
+            -0.0015632126
+          ],
+          "paired_p95_deltas_us": [
+            -0.334,
+            0.082,
+            0.041,
+            0.041
+          ],
+          "results": [
+            {
+              "backend_calls": 64652,
+              "mean_latency_us": 6.94121851,
+              "median_injected_us_per_fetch": 10.0292676,
+              "model_calls": 0,
+              "p50_latency_us": 10.542,
+              "p95_latency_us": 10.709,
+              "policy": "sieve"
+            },
+            {
+              "backend_calls": 64512,
+              "mean_latency_us": 6.95156144,
+              "median_injected_us_per_fetch": 10.0259496,
+              "model_calls": 38611,
+              "p50_latency_us": 10.583,
+              "p95_latency_us": 10.75,
+              "policy": "cachetriage"
+            }
+          ]
+        },
+        {
+          "added_fetch_delay_us": 20,
+          "median_paired_mean_delta_us": -0.0160557189,
+          "median_paired_p95_delta_us": 0.0205,
+          "paired_mean_deltas_us": [
+            0.0332221607,
+            -0.024126113,
+            -0.00798532493,
+            -0.0372512691
+          ],
+          "paired_p95_deltas_us": [
+            0.292,
+            0,
+            0.041,
+            -0.042
+          ],
+          "results": [
+            {
+              "backend_calls": 64652,
+              "mean_latency_us": 13.4731472,
+              "median_injected_us_per_fetch": 20.0244992,
+              "model_calls": 0,
+              "p50_latency_us": 20.542,
+              "p95_latency_us": 20.771,
+              "policy": "sieve"
+            },
+            {
+              "backend_calls": 64512,
+              "mean_latency_us": 13.4436654,
+              "median_injected_us_per_fetch": 20.0252624,
+              "model_calls": 38611,
+              "p50_latency_us": 20.583,
+              "p95_latency_us": 20.75,
+              "policy": "cachetriage"
+            }
+          ]
+        },
+        {
+          "added_fetch_delay_us": 40,
+          "median_paired_mean_delta_us": -0.0058545385,
+          "median_paired_p95_delta_us": 0.271,
+          "paired_mean_deltas_us": [
+            0.0806540732,
+            -0.0550765984,
+            0.0393809375,
+            -0.0510900145
+          ],
+          "paired_p95_deltas_us": [
+            0.708,
+            -0.291,
+            0.542,
+            0
+          ],
+          "results": [
+            {
+              "backend_calls": 64652,
+              "mean_latency_us": 26.5590257,
+              "median_injected_us_per_fetch": 40.031389,
+              "model_calls": 0,
+              "p50_latency_us": 40.542,
+              "p95_latency_us": 41.25,
+              "policy": "sieve"
+            },
+            {
+              "backend_calls": 64512,
+              "mean_latency_us": 26.5749065,
+              "median_injected_us_per_fetch": 40.033982,
+              "model_calls": 38611,
+              "p50_latency_us": 40.5835,
+              "p95_latency_us": 41.6045,
+              "policy": "cachetriage"
+            }
+          ]
+        },
+        {
+          "added_fetch_delay_us": 80,
+          "median_paired_mean_delta_us": -0.0899612324,
+          "median_paired_p95_delta_us": 0.104,
+          "paired_mean_deltas_us": [
+            -0.277000635,
+            -0.0649126748,
+            -0.0975639882,
+            -0.0823584767
+          ],
+          "paired_p95_deltas_us": [
+            -1.126,
+            0.167,
+            0.083,
+            0.125
+          ],
+          "results": [
+            {
+              "backend_calls": 64652,
+              "mean_latency_us": 52.5655421,
+              "median_injected_us_per_fetch": 80.0287276,
+              "model_calls": 0,
+              "p50_latency_us": 80.583,
+              "p95_latency_us": 80.792,
+              "policy": "sieve"
+            },
+            {
+              "backend_calls": 64512,
+              "mean_latency_us": 52.4823681,
+              "median_injected_us_per_fetch": 80.0255678,
+              "model_calls": 38611,
+              "p50_latency_us": 80.584,
+              "p95_latency_us": 80.917,
+              "policy": "cachetriage"
+            }
+          ]
+        }
+      ],
+      "demo_rounds": 4,
+      "gate_max_age_gap_reads": 1,
+      "profile_bytes": 256,
+      "profiles": 23803,
+      "requests": 99284,
+      "sqlite_version": "3.51.0"
+    }
+  ],
+  "source_end_row": 100000,
+  "source_file": "cluster024.csv",
+  "source_slice_sha256": "b3c485b69915323d2f026465793f82f791b6ec717c92c6e7cf88ccf553ebabd6",
+  "source_start_row": 1,
+  "source_timestamp_descents": 14
+}

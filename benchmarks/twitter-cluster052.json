@@ -1,0 +1,103 @@
+{
+  "distinct_read_keys": 37538,
+  "operations": {
+    "add": 4423,
+    "cas": 2467,
+    "delete": 860,
+    "get": 89313,
+    "gets": 2923,
+    "set": 14
+  },
+  "read_count": 92236,
+  "read_timestamp_range_seconds": [
+    0,
+    6
+  ],
+  "replays": [
+    {
+      "capacity_items": 128,
+      "requests": 92236,
+      "results": [
+        {
+          "evictions": 75902,
+          "hits": 16206,
+          "miss_rate": 0.8242985385315929,
+          "misses": 76030,
+          "policy": "lru"
+        },
+        {
+          "evictions": 74865,
+          "hits": 17243,
+          "miss_rate": 0.813055639880307,
+          "misses": 74993,
+          "policy": "sieve"
+        }
+      ]
+    },
+    {
+      "capacity_items": 512,
+      "requests": 92236,
+      "results": [
+        {
+          "evictions": 64741,
+          "hits": 26983,
+          "miss_rate": 0.7074569582375645,
+          "misses": 65253,
+          "policy": "lru"
+        },
+        {
+          "evictions": 64680,
+          "hits": 27044,
+          "miss_rate": 0.7067956112580771,
+          "misses": 65192,
+          "policy": "sieve"
+        }
+      ]
+    },
+    {
+      "capacity_items": 2048,
+      "requests": 92236,
+      "results": [
+        {
+          "evictions": 51021,
+          "hits": 39167,
+          "miss_rate": 0.5753610304002775,
+          "misses": 53069,
+          "policy": "lru"
+        },
+        {
+          "evictions": 51730,
+          "hits": 38458,
+          "miss_rate": 0.5830478338175983,
+          "misses": 53778,
+          "policy": "sieve"
+        }
+      ]
+    },
+    {
+      "capacity_items": 8192,
+      "requests": 92236,
+      "results": [
+        {
+          "evictions": 35020,
+          "hits": 49024,
+          "miss_rate": 0.46849386356737066,
+          "misses": 43212,
+          "policy": "lru"
+        },
+        {
+          "evictions": 34970,
+          "hits": 49074,
+          "miss_rate": 0.46795177587926623,
+          "misses": 43162,
+          "policy": "sieve"
+        }
+      ]
+    }
+  ],
+  "source_end_row": 100000,
+  "source_file": "cluster052.csv",
+  "source_slice_sha256": "175be9b41c1a116ede41d3d6b44a5f6bccc08e68260971a49b9cf669a48d80cd",
+  "source_start_row": 1,
+  "source_timestamp_descents": 11
+}

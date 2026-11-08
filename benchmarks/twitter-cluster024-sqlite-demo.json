@@ -1,0 +1,66 @@
+{
+  "benchmark_platform": "macOS-26.6-arm64-arm-64bit",
+  "distinct_read_keys": 23803,
+  "model_file": "twitter-cluster052-reuse-v1.txt",
+  "model_sha256": "7acba094005c67752591283d1e597e2f9673cf1f54cb59f2b5a87937fb87d60c",
+  "operations": {
+    "get": 99284,
+    "set": 716
+  },
+  "read_count": 99284,
+  "read_timestamp_range_seconds": [
+    0,
+    33
+  ],
+  "replays": [
+    {
+      "backend": "temporary_sqlite",
+      "capacity_items": 128,
+      "demo_rounds": 8,
+      "gate_max_age_gap_reads": 1,
+      "profile_bytes": 256,
+      "profiles": 23803,
+      "requests": 99284,
+      "results": [
+        {
+          "backend_calls": 69460,
+          "mean_latency_us": 0.401891402,
+          "model_calls": 0,
+          "p50_latency_us": 0.5,
+          "p95_latency_us": 0.667,
+          "policy": "lru"
+        },
+        {
+          "backend_calls": 64652,
+          "mean_latency_us": 0.375900049,
+          "model_calls": 0,
+          "p50_latency_us": 0.5,
+          "p95_latency_us": 0.667,
+          "policy": "sieve"
+        },
+        {
+          "backend_calls": 65899,
+          "mean_latency_us": 0.408774641,
+          "model_calls": 65771,
+          "p50_latency_us": 0.542,
+          "p95_latency_us": 0.708,
+          "policy": "always_score"
+        },
+        {
+          "backend_calls": 64512,
+          "mean_latency_us": 0.398241308,
+          "model_calls": 38611,
+          "p50_latency_us": 0.542,
+          "p95_latency_us": 0.708,
+          "policy": "cachetriage"
+        }
+      ],
+      "sqlite_version": "3.51.0"
+    }
+  ],
+  "source_end_row": 100000,
+  "source_file": "cluster024.csv",
+  "source_slice_sha256": "b3c485b69915323d2f026465793f82f791b6ec717c92c6e7cf88ccf553ebabd6",
+  "source_start_row": 1,
+  "source_timestamp_descents": 14
+}

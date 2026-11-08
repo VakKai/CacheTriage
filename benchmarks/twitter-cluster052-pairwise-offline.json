@@ -1,0 +1,142 @@
+{
+  "calibration_pairs": {
+    "alternative_pairs": 6000,
+    "beneficial_pairs": 1057,
+    "decisions_sampled": 2000,
+    "decisions_with_beneficial_alternative": 490,
+    "decisions_with_harmful_alternative": 542,
+    "harmful_pairs": 957,
+    "sum_best_local_misses_saved": 1501,
+    "sum_worst_local_extra_misses": 699,
+    "tied_pairs": 3986
+  },
+  "capacity_items": 128,
+  "evaluation_original_reuse_always_score": {
+    "harmful": 3,
+    "helpful": 61,
+    "net_local_misses_saved": 279,
+    "overrides": 81,
+    "tied": 17
+  },
+  "evaluation_pairs": {
+    "alternative_pairs": 6000,
+    "beneficial_pairs": 1230,
+    "decisions_sampled": 2000,
+    "decisions_with_beneficial_alternative": 553,
+    "decisions_with_harmful_alternative": 471,
+    "harmful_pairs": 863,
+    "sum_best_local_misses_saved": 1652,
+    "sum_worst_local_extra_misses": 567,
+    "tied_pairs": 3907
+  },
+  "evaluation_positive_rate": 0.205,
+  "horizon_reads": 100,
+  "models": {
+    "basic_pairwise_logistic": {
+      "calibration": {
+        "harmful": 55,
+        "helpful": 279,
+        "net_local_misses_saved": 1123,
+        "overrides": 400,
+        "threshold": 0.3,
+        "tied": 66
+      },
+      "offline_evaluation": {
+        "average_precision": 0.5991894402266577,
+        "harmful": 43,
+        "helpful": 271,
+        "net_local_misses_saved": 1105,
+        "overrides": 350,
+        "roc_auc": 0.7749617357808798,
+        "tied": 36
+      }
+    },
+    "history_pairwise_logistic": {
+      "calibration": {
+        "harmful": 58,
+        "helpful": 280,
+        "net_local_misses_saved": 1118,
+        "overrides": 411,
+        "threshold": 0.3,
+        "tied": 73
+      },
+      "offline_evaluation": {
+        "average_precision": 0.5963714723349319,
+        "harmful": 47,
+        "helpful": 271,
+        "net_local_misses_saved": 1097,
+        "overrides": 358,
+        "roc_auc": 0.7727534897990489,
+        "tied": 40
+      }
+    },
+    "history_shallow_boosted_trees": {
+      "calibration": {
+        "harmful": 21,
+        "helpful": 273,
+        "net_local_misses_saved": 1172,
+        "overrides": 337,
+        "threshold": 0.45,
+        "tied": 43
+      },
+      "offline_evaluation": {
+        "average_precision": 0.6296871216756805,
+        "harmful": 17,
+        "helpful": 270,
+        "net_local_misses_saved": 1226,
+        "overrides": 308,
+        "roc_auc": 0.7955370626033305,
+        "tied": 21
+      }
+    }
+  },
+  "scikit_learn_version": "1.6.1",
+  "selected_on_calibration": "history_shallow_boosted_trees",
+  "selection": "maximize net local misses saved on calibration, then prefer fewer overrides",
+  "source": {
+    "distinct_read_keys": 37538,
+    "operations": {
+      "add": 4423,
+      "cas": 2467,
+      "delete": 860,
+      "get": 89313,
+      "gets": 2923,
+      "set": 14
+    },
+    "read_count": 92236,
+    "read_timestamp_range_seconds": [
+      0,
+      6
+    ],
+    "source_end_row": 100000,
+    "source_file": "cluster052.csv",
+    "source_slice_sha256": "175be9b41c1a116ede41d3d6b44a5f6bccc08e68260971a49b9cf669a48d80cd",
+    "source_start_row": 1,
+    "source_timestamp_descents": 11
+  },
+  "splits": {
+    "calibration": {
+      "first_read": 55342,
+      "last_read": 73788
+    },
+    "evaluation": {
+      "first_read": 73789,
+      "last_read": 92236
+    },
+    "train": {
+      "first_read": 1,
+      "last_read": 55341
+    }
+  },
+  "training_pairs": {
+    "alternative_pairs": 12000,
+    "beneficial_pairs": 2485,
+    "decisions_sampled": 4000,
+    "decisions_with_beneficial_alternative": 1192,
+    "decisions_with_harmful_alternative": 921,
+    "harmful_pairs": 1705,
+    "sum_best_local_misses_saved": 3807,
+    "sum_worst_local_extra_misses": 1197,
+    "tied_pairs": 7810
+  }
+}

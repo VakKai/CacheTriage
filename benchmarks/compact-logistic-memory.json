@@ -1,0 +1,2478 @@
+{
+  "platform": "macOS-26.6-arm64-arm-64bit-Mach-O",
+  "pairwise_model_file": "twitter-cluster052-pairwise-v1.json",
+  "pairwise_model_sha256": "fd7f993f17bb952cb4e80a34b551fad428678d7de8d501fd6c93997e4914e6f9",
+  "memory_scope": "inline cache/player, peak requested cache heap, and the relevant model and log table",
+  "sqlite_cpu_scope": "request loop including per-request timing and profile checks; excludes setup and sorting",
+  "workloads": [
+    {
+      "workload": "Twitter cluster 29",
+      "source": {
+        "source_file": "cluster029.csv",
+        "source_start_row": 1,
+        "source_end_row": 100000,
+        "source_slice_sha256": "85fda9aee293df91db2219b9aea6c52792165c67ba041c1822e6654308ae5559",
+        "source_timestamp_descents": 8,
+        "read_timestamp_range_seconds": [
+          0,
+          14
+        ],
+        "operations": {
+          "get": 85573,
+          "set": 13993,
+          "delete": 434
+        },
+        "read_count": 85573,
+        "distinct_read_keys": 37405,
+        "source_url": "https://raw.githubusercontent.com/twitter/cache-trace/1c503676d6972d4394a360e09162149a6c00f516/samples/2020Mar/cluster029",
+        "download_byte_range": [
+          0,
+          8388607
+        ]
+      },
+      "victim_parity_at_128_items": {
+        "requests": 85573,
+        "matching_evictions": 60511,
+        "original_history_bytes": 32,
+        "compact_history_bytes": 16
+      },
+      "equal_items": {
+        "requests": 85573,
+        "benchmark_rounds": 16,
+        "capacity_items": 128,
+        "results": [
+          {
+            "policy": "sieve",
+            "hits": 23917,
+            "misses": 61656,
+            "evictions": 61528,
+            "miss_rate": 0.7205076367545838
+          },
+          {
+            "policy": "pairwise_logistic",
+            "hits": 24934,
+            "misses": 60639,
+            "evictions": 60511,
+            "miss_rate": 0.7086230469891204,
+            "victim_swaps": 329,
+            "model_calls": 60511,
+            "model_calls_per_eviction": 1
+          }
+        ],
+        "performance": [
+          {
+            "policy": "sieve",
+            "capacity_items": 128,
+            "median_cpu_seconds": 0.003238,
+            "median_wall_seconds": 0.003241146,
+            "requests_per_second": 26402081.23916664,
+            "peak_accounted_bytes": 9888,
+            "model_bytes": 0,
+            "cpu_seconds_samples": [
+              0.003459,
+              0.003335,
+              0.003295,
+              0.003263,
+              0.003256,
+              0.003242,
+              0.003235,
+              0.00324,
+              0.003219,
+              0.003233,
+              0.00322,
+              0.003225,
+              0.003239,
+              0.003236,
+              0.003208,
+              0.003237
+            ],
+            "wall_seconds_samples": [
+              0.003460333,
+              0.003336583,
+              0.0032985,
+              0.003265708,
+              0.003259667,
+              0.003245625,
+              0.003238416,
+              0.003243666,
+              0.00321975,
+              0.003237417,
+              0.0032235,
+              0.00322925,
+              0.003242625,
+              0.003239667,
+              0.003212709,
+              0.003238666
+            ]
+          },
+          {
+            "policy": "pairwise_logistic",
+            "capacity_items": 128,
+            "median_cpu_seconds": 0.0037549999999999997,
+            "median_wall_seconds": 0.0037570625,
+            "requests_per_second": 22776570.79167568,
+            "peak_accounted_bytes": 14056,
+            "model_bytes": 2096,
+            "cpu_seconds_samples": [
+              0.003953,
+              0.00385,
+              0.003791,
+              0.003771,
+              0.003769,
+              0.003757,
+              0.003747,
+              0.003744,
+              0.003763,
+              0.003748,
+              0.00375,
+              0.003754,
+              0.003742,
+              0.003756,
+              0.003746,
+              0.003739
+            ],
+            "wall_seconds_samples": [
+              0.003958125,
+              0.003850458,
+              0.003794125,
+              0.00377525,
+              0.003772541,
+              0.00375975,
+              0.003751166,
+              0.003744792,
+              0.003766541,
+              0.003752125,
+              0.003754083,
+              0.003757417,
+              0.003745833,
+              0.003756708,
+              0.003750333,
+              0.003742209
+            ]
+          }
+        ]
+      },
+      "memory_sweep": [
+        {
+          "requests": 85573,
+          "benchmark_rounds": 16,
+          "budget_bytes": 16384,
+          "results": [
+            {
+              "policy": "sieve",
+              "hits": 27169,
+              "misses": 58404,
+              "evictions": 58207,
+              "miss_rate": 0.682504995734636
+            },
+            {
+              "policy": "pairwise_logistic",
+              "hits": 26417,
+              "misses": 59156,
+              "evictions": 58999,
+              "miss_rate": 0.6912928143222745,
+              "victim_swaps": 282,
+              "model_calls": 58999,
+              "model_calls_per_eviction": 1
+            }
+          ],
+          "performance": [
+            {
+              "policy": "sieve",
+              "capacity_items": 197,
+              "median_cpu_seconds": 0.003549,
+              "median_wall_seconds": 0.0035529165000000003,
+              "requests_per_second": 24085283.17510417,
+              "peak_accounted_bytes": 14304,
+              "model_bytes": 0,
+              "cpu_seconds_samples": [
+                0.003805,
+                0.003684,
+                0.003633,
+                0.003614,
+                0.003609,
+                0.003767,
+                0.003618,
+                0.003571,
+                0.003527,
+                0.003523,
+                0.003494,
+                0.003494,
+                0.003501,
+                0.003499,
+                0.003517,
+                0.003485
+              ],
+              "wall_seconds_samples": [
+                0.003808417,
+                0.00368825,
+                0.003636417,
+                0.003617625,
+                0.003612958,
+                0.003770583,
+                0.003620375,
+                0.003575417,
+                0.003530416,
+                0.003527,
+                0.003498125,
+                0.00349725,
+                0.003502917,
+                0.003503208,
+                0.003518292,
+                0.003489292
+              ]
+            },
+            {
+              "policy": "pairwise_logistic",
+              "capacity_items": 157,
+              "median_cpu_seconds": 0.0038735,
+              "median_wall_seconds": 0.0038770415,
+              "requests_per_second": 22071726.59874804,
+              "peak_accounted_bytes": 16376,
+              "model_bytes": 2096,
+              "cpu_seconds_samples": [
+                0.004152,
+                0.004032,
+                0.003974,
+                0.003974,
+                0.003961,
+                0.003991,
+                0.003938,
+                0.003885,
+                0.003862,
+                0.003843,
+                0.003828,
+                0.003822,
+                0.003812,
+                0.003803,
+                0.003815,
+                0.003807
+              ],
+              "wall_seconds_samples": [
+                0.0041555,
+                0.004034625,
+                0.003978292,
+                0.003974958,
+                0.003965042,
+                0.003995208,
+                0.00394125,
+                0.003887625,
+                0.003866458,
+                0.0038445,
+                0.003830666,
+                0.003826166,
+                0.003812875,
+                0.003803417,
+                0.003816375,
+                0.00381125
+              ]
+            }
+          ]
+        },
+        {
+          "requests": 85573,
+          "benchmark_rounds": 16,
+          "budget_bytes": 24576,
+          "results": [
+            {
+              "policy": "sieve",
+              "hits": 29976,
+              "misses": 55597,
+              "evictions": 55265,
+              "miss_rate": 0.6497025931076391
+            },
+            {
+              "policy": "pairwise_logistic",
+              "hits": 28952,
+              "misses": 56621,
+              "evictions": 56382,
+              "miss_rate": 0.6616689843759129,
+              "victim_swaps": 211,
+              "model_calls": 56382,
+              "model_calls_per_eviction": 1
+            }
+          ],
+          "performance": [
+            {
+              "policy": "sieve",
+              "capacity_items": 332,
+              "median_cpu_seconds": 0.003297,
+              "median_wall_seconds": 0.0033001665,
+              "requests_per_second": 25929903.83970021,
+              "peak_accounted_bytes": 24544,
+              "model_bytes": 0,
+              "cpu_seconds_samples": [
+                0.003525,
+                0.00342,
+                0.003366,
+                0.003328,
+                0.003332,
+                0.003307,
+                0.0033,
+                0.003305,
+                0.00329,
+                0.003294,
+                0.003288,
+                0.003294,
+                0.003285,
+                0.003292,
+                0.003282,
+                0.003278
+              ],
+              "wall_seconds_samples": [
+                0.003530042,
+                0.003423208,
+                0.003369625,
+                0.003331625,
+                0.003334833,
+                0.003310167,
+                0.003302625,
+                0.003305167,
+                0.0032935,
+                0.003297459,
+                0.003290542,
+                0.003297708,
+                0.003289042,
+                0.003295541,
+                0.003286708,
+                0.003281042
+              ]
+            },
+            {
+              "policy": "pairwise_logistic",
+              "capacity_items": 239,
+              "median_cpu_seconds": 0.003569,
+              "median_wall_seconds": 0.0035715415,
+              "requests_per_second": 23959682.394842677,
+              "peak_accounted_bytes": 24536,
+              "model_bytes": 2096,
+              "cpu_seconds_samples": [
+                0.003712,
+                0.003659,
+                0.003613,
+                0.003604,
+                0.003584,
+                0.003573,
+                0.003583,
+                0.003562,
+                0.003563,
+                0.003594,
+                0.003565,
+                0.003555,
+                0.003556,
+                0.003545,
+                0.003555,
+                0.003553
+              ],
+              "wall_seconds_samples": [
+                0.003716167,
+                0.003662958,
+                0.003616917,
+                0.003607542,
+                0.003587125,
+                0.003574333,
+                0.003585958,
+                0.003565583,
+                0.003566917,
+                0.003596625,
+                0.00356875,
+                0.003558584,
+                0.003560042,
+                0.003548,
+                0.003557542,
+                0.0035565
+              ]
+            }
+          ]
+        },
+        {
+          "requests": 85573,
+          "benchmark_rounds": 16,
+          "budget_bytes": 40960,
+          "results": [
+            {
+              "policy": "sieve",
+              "hits": 32193,
+              "misses": 53380,
+              "evictions": 52842,
+              "miss_rate": 0.6237948885746673
+            },
+            {
+              "policy": "pairwise_logistic",
+              "hits": 31217,
+              "misses": 54356,
+              "evictions": 53959,
+              "miss_rate": 0.6352003552522407,
+              "victim_swaps": 109,
+              "model_calls": 53959,
+              "model_calls_per_eviction": 1
+            }
+          ],
+          "performance": [
+            {
+              "policy": "sieve",
+              "capacity_items": 538,
+              "median_cpu_seconds": 0.0031395,
+              "median_wall_seconds": 0.0031424165,
+              "requests_per_second": 27231590.72007164,
+              "peak_accounted_bytes": 40928,
+              "model_bytes": 0,
+              "cpu_seconds_samples": [
+                0.00332,
+                0.003215,
+                0.003157,
+                0.003166,
+                0.00314,
+                0.003169,
+                0.003124,
+                0.003139,
+                0.003129,
+                0.003143,
+                0.00313,
+                0.003118,
+                0.003095,
+                0.003163,
+                0.003106,
+                0.00307
+              ],
+              "wall_seconds_samples": [
+                0.003323125,
+                0.003218833,
+                0.003160583,
+                0.003168916,
+                0.003143583,
+                0.003172791,
+                0.003128708,
+                0.0031425,
+                0.003130417,
+                0.003142333,
+                0.003134375,
+                0.003120333,
+                0.003099167,
+                0.003166458,
+                0.003109459,
+                0.003073291
+              ]
+            },
+            {
+              "policy": "pairwise_logistic",
+              "capacity_items": 397,
+              "median_cpu_seconds": 0.004336,
+              "median_wall_seconds": 0.004339667,
+              "requests_per_second": 19718794.09180474,
+              "peak_accounted_bytes": 37176,
+              "model_bytes": 2096,
+              "cpu_seconds_samples": [
+                0.004529,
+                0.004439,
+                0.004376,
+                0.004361,
+                0.00435,
+                0.004335,
+                0.004331,
+                0.004336,
+                0.004333,
+                0.004325,
+                0.004326,
+                0.004327,
+                0.004336,
+                0.004316,
+                0.00456,
+                0.0044
+              ],
+              "wall_seconds_samples": [
+                0.004530084,
+                0.004440792,
+                0.004378792,
+                0.004364041,
+                0.0043535,
+                0.00433875,
+                0.004334209,
+                0.004339625,
+                0.004336542,
+                0.004329083,
+                0.004330042,
+                0.004331209,
+                0.004339709,
+                0.004320166,
+                0.004563709,
+                0.004401
+              ]
+            }
+          ]
+        },
+        {
+          "requests": 85573,
+          "benchmark_rounds": 16,
+          "budget_bytes": 65536,
+          "results": [
+            {
+              "policy": "sieve",
+              "hits": 33837,
+              "misses": 51736,
+              "evictions": 50939,
+              "miss_rate": 0.6045832213431807
+            },
+            {
+              "policy": "pairwise_logistic",
+              "hits": 33664,
+              "misses": 51909,
+              "evictions": 51198,
+              "miss_rate": 0.6066048870554964,
+              "victim_swaps": 53,
+              "model_calls": 51198,
+              "model_calls_per_eviction": 1
+            }
+          ],
+          "performance": [
+            {
+              "policy": "sieve",
+              "capacity_items": 797,
+              "median_cpu_seconds": 0.003438,
+              "median_wall_seconds": 0.003440625,
+              "requests_per_second": 24871353.315168027,
+              "peak_accounted_bytes": 57504,
+              "model_bytes": 0,
+              "cpu_seconds_samples": [
+                0.003651,
+                0.003533,
+                0.003481,
+                0.003498,
+                0.003425,
+                0.00335,
+                0.003328,
+                0.003668,
+                0.003513,
+                0.003451,
+                0.003382,
+                0.003378,
+                0.00335,
+                0.003332,
+                0.003287,
+                0.003477
+              ],
+              "wall_seconds_samples": [
+                0.003655042,
+                0.003534,
+                0.003482459,
+                0.003498708,
+                0.003425833,
+                0.003353709,
+                0.003331875,
+                0.003671958,
+                0.00351375,
+                0.003455417,
+                0.00338175,
+                0.003382542,
+                0.003351375,
+                0.003336083,
+                0.003291209,
+                0.0034865
+              ]
+            },
+            {
+              "policy": "pairwise_logistic",
+              "capacity_items": 711,
+              "median_cpu_seconds": 0.00435,
+              "median_wall_seconds": 0.0043522915,
+              "requests_per_second": 19661596.65546299,
+              "peak_accounted_bytes": 65496,
+              "model_bytes": 2096,
+              "cpu_seconds_samples": [
+                0.004406,
+                0.004354,
+                0.004425,
+                0.004319,
+                0.004288,
+                0.004238,
+                0.004217,
+                0.004445,
+                0.004585,
+                0.00444,
+                0.004389,
+                0.004326,
+                0.004353,
+                0.004305,
+                0.004329,
+                0.004347
+              ],
+              "wall_seconds_samples": [
+                0.004407042,
+                0.004353959,
+                0.004426292,
+                0.004319541,
+                0.004290833,
+                0.0042385,
+                0.004218166,
+                0.004454875,
+                0.00458825,
+                0.004442917,
+                0.004392,
+                0.0043295,
+                0.004353708,
+                0.004307833,
+                0.00432925,
+                0.004350875
+              ]
+            }
+          ]
+        },
+        {
+          "requests": 85573,
+          "benchmark_rounds": 16,
+          "budget_bytes": 98304,
+          "results": [
+            {
+              "policy": "sieve",
+              "hits": 36091,
+              "misses": 49482,
+              "evictions": 48148,
+              "miss_rate": 0.5782431374382107
+            },
+            {
+              "policy": "pairwise_logistic",
+              "hits": 35213,
+              "misses": 50360,
+              "evictions": 49319,
+              "miss_rate": 0.5885033830764377,
+              "victim_swaps": 31,
+              "model_calls": 49319,
+              "model_calls_per_eviction": 1
+            }
+          ],
+          "performance": [
+            {
+              "policy": "sieve",
+              "capacity_items": 1334,
+              "median_cpu_seconds": 0.0032385,
+              "median_wall_seconds": 0.0032411045,
+              "requests_per_second": 26402419.2987298,
+              "peak_accounted_bytes": 98272,
+              "model_bytes": 0,
+              "cpu_seconds_samples": [
+                0.003416,
+                0.003486,
+                0.003376,
+                0.003454,
+                0.003327,
+                0.003279,
+                0.003227,
+                0.003337,
+                0.00325,
+                0.003161,
+                0.003169,
+                0.003148,
+                0.003149,
+                0.00315,
+                0.003129,
+                0.003146
+              ],
+              "wall_seconds_samples": [
+                0.003416708,
+                0.003489625,
+                0.00337875,
+                0.00345525,
+                0.003330417,
+                0.0032795,
+                0.003231709,
+                0.003340625,
+                0.0032505,
+                0.003161125,
+                0.003169167,
+                0.003149292,
+                0.003148917,
+                0.003153583,
+                0.003129666,
+                0.003150666
+              ]
+            },
+            {
+              "policy": "pairwise_logistic",
+              "capacity_items": 1041,
+              "median_cpu_seconds": 0.0040785000000000005,
+              "median_wall_seconds": 0.0040843749999999995,
+              "requests_per_second": 20951308.33970926,
+              "peak_accounted_bytes": 98296,
+              "model_bytes": 2096,
+              "cpu_seconds_samples": [
+                0.004287,
+                0.004238,
+                0.004134,
+                0.004299,
+                0.004241,
+                0.00409,
+                0.004049,
+                0.00408,
+                0.004228,
+                0.004077,
+                0.004031,
+                0.003985,
+                0.003981,
+                0.003956,
+                0.003983,
+                0.003995
+              ],
+              "wall_seconds_samples": [
+                0.004290208,
+                0.004239417,
+                0.004135125,
+                0.004338958,
+                0.00424525,
+                0.004093542,
+                0.004054833,
+                0.004083208,
+                0.004231667,
+                0.004085542,
+                0.00403525,
+                0.003986083,
+                0.003981833,
+                0.003960416,
+                0.003982792,
+                0.003997958
+              ]
+            }
+          ]
+        }
+      ],
+      "break_even_at_40_kib": {
+        "sieve_miss_target": 53380,
+        "max_capacity_scanned": 1024,
+        "first_match": {
+          "capacity_items": 493,
+          "misses": 53335,
+          "peak_prefill_bytes": 48056
+        }
+      },
+      "sqlite": [
+        {
+          "backend": "temporary_sqlite",
+          "sqlite_version": "3.51.0",
+          "budget_bytes": 40960,
+          "requests": 85573,
+          "profiles": 37405,
+          "profile_bytes": 256,
+          "demo_rounds": 16,
+          "results": [
+            {
+              "policy": "sieve",
+              "backend_calls": 62180,
+              "model_calls": 0,
+              "mean_latency_us": 0.346900004,
+              "p50_latency_us": 0.417,
+              "p95_latency_us": 0.584,
+              "median_cpu_seconds": 0.032442
+            },
+            {
+              "policy": "pairwise_logistic",
+              "backend_calls": 61915,
+              "model_calls": 61805,
+              "mean_latency_us": 0.348183826,
+              "p50_latency_us": 0.417,
+              "p95_latency_us": 0.584,
+              "median_cpu_seconds": 0.0325565
+            }
+          ],
+          "memory": [
+            {
+              "policy": "sieve",
+              "capacity_items": 122,
+              "peak_accounted_bytes": 40704,
+              "model_bytes": 0
+            },
+            {
+              "policy": "pairwise_logistic",
+              "capacity_items": 110,
+              "peak_accounted_bytes": 40736,
+              "model_bytes": 2096
+            }
+          ]
+        },
+        {
+          "backend": "temporary_sqlite",
+          "sqlite_version": "3.51.0",
+          "budget_bytes": 65536,
+          "requests": 85573,
+          "profiles": 37405,
+          "profile_bytes": 256,
+          "demo_rounds": 16,
+          "results": [
+            {
+              "policy": "sieve",
+              "backend_calls": 58404,
+              "model_calls": 0,
+              "mean_latency_us": 0.3409904,
+              "p50_latency_us": 0.417,
+              "p95_latency_us": 0.625,
+              "median_cpu_seconds": 0.0319785
+            },
+            {
+              "policy": "pairwise_logistic",
+              "backend_calls": 58164,
+              "model_calls": 57981,
+              "mean_latency_us": 0.34400641,
+              "p50_latency_us": 0.417,
+              "p95_latency_us": 0.625,
+              "median_cpu_seconds": 0.0322185
+            }
+          ],
+          "memory": [
+            {
+              "policy": "sieve",
+              "capacity_items": 197,
+              "peak_accounted_bytes": 64704,
+              "model_bytes": 0
+            },
+            {
+              "policy": "pairwise_logistic",
+              "capacity_items": 183,
+              "peak_accounted_bytes": 65264,
+              "model_bytes": 2096
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "workload": "Twitter cluster 52 later window",
+      "source": {
+        "source_file": "cluster052.csv",
+        "source_start_row": 100001,
+        "source_end_row": 140000,
+        "source_slice_sha256": "984efac2244001cdb9b901285abfec8574a743971690b8b26d589e0fe856a5f5",
+        "source_timestamp_descents": 7,
+        "read_timestamp_range_seconds": [
+          6,
+          8
+        ],
+        "operations": {
+          "get": 36053,
+          "delete": 296,
+          "add": 1677,
+          "gets": 1020,
+          "cas": 951,
+          "set": 3
+        },
+        "read_count": 37073,
+        "distinct_read_keys": 16915
+      },
+      "victim_parity_at_128_items": {
+        "requests": 37073,
+        "matching_evictions": 29059,
+        "original_history_bytes": 32,
+        "compact_history_bytes": 16
+      },
+      "equal_items": {
+        "requests": 37073,
+        "benchmark_rounds": 16,
+        "capacity_items": 128,
+        "results": [
+          {
+            "policy": "sieve",
+            "hits": 7632,
+            "misses": 29441,
+            "evictions": 29313,
+            "miss_rate": 0.7941358940468805
+          },
+          {
+            "policy": "pairwise_logistic",
+            "hits": 7886,
+            "misses": 29187,
+            "evictions": 29059,
+            "miss_rate": 0.7872845467051492,
+            "victim_swaps": 87,
+            "model_calls": 29059,
+            "model_calls_per_eviction": 1
+          }
+        ],
+        "performance": [
+          {
+            "policy": "sieve",
+            "capacity_items": 128,
+            "median_cpu_seconds": 0.0015025,
+            "median_wall_seconds": 0.0015061245,
+            "requests_per_second": 24614830.97844833,
+            "peak_accounted_bytes": 9888,
+            "model_bytes": 0,
+            "cpu_seconds_samples": [
+              0.001693,
+              0.001612,
+              0.001599,
+              0.001546,
+              0.001525,
+              0.001511,
+              0.001506,
+              0.001499,
+              0.001491,
+              0.001487,
+              0.001476,
+              0.001477,
+              0.001471,
+              0.001472,
+              0.001469,
+              0.001621
+            ],
+            "wall_seconds_samples": [
+              0.001696667,
+              0.001615042,
+              0.001602583,
+              0.001549333,
+              0.001528917,
+              0.001511208,
+              0.001509541,
+              0.001502708,
+              0.001491959,
+              0.001487292,
+              0.0014795,
+              0.001480334,
+              0.001470875,
+              0.001473167,
+              0.001472458,
+              0.001628291
+            ]
+          },
+          {
+            "policy": "pairwise_logistic",
+            "capacity_items": 128,
+            "median_cpu_seconds": 0.001699,
+            "median_wall_seconds": 0.0017024375,
+            "requests_per_second": 21776423.510407872,
+            "peak_accounted_bytes": 14056,
+            "model_bytes": 2096,
+            "cpu_seconds_samples": [
+              0.001858,
+              0.001797,
+              0.001737,
+              0.001723,
+              0.001707,
+              0.001702,
+              0.001713,
+              0.0017,
+              0.001691,
+              0.00169,
+              0.001698,
+              0.001686,
+              0.001692,
+              0.001683,
+              0.001685,
+              0.001683
+            ],
+            "wall_seconds_samples": [
+              0.001862083,
+              0.001800583,
+              0.001741416,
+              0.001726167,
+              0.001709625,
+              0.001705125,
+              0.001713708,
+              0.001703625,
+              0.001695667,
+              0.001693208,
+              0.00170125,
+              0.001689875,
+              0.001695125,
+              0.001687,
+              0.001688125,
+              0.001683541
+            ]
+          }
+        ]
+      },
+      "memory_sweep": [
+        {
+          "requests": 37073,
+          "benchmark_rounds": 16,
+          "budget_bytes": 16384,
+          "results": [
+            {
+              "policy": "sieve",
+              "hits": 8719,
+              "misses": 28354,
+              "evictions": 28157,
+              "miss_rate": 0.7648153642812828
+            },
+            {
+              "policy": "pairwise_logistic",
+              "hits": 8490,
+              "misses": 28583,
+              "evictions": 28426,
+              "miss_rate": 0.7709923664122137,
+              "victim_swaps": 71,
+              "model_calls": 28426,
+              "model_calls_per_eviction": 1
+            }
+          ],
+          "performance": [
+            {
+              "policy": "sieve",
+              "capacity_items": 197,
+              "median_cpu_seconds": 0.0015674999999999999,
+              "median_wall_seconds": 0.0015695205,
+              "requests_per_second": 23620589.85530931,
+              "peak_accounted_bytes": 14304,
+              "model_bytes": 0,
+              "cpu_seconds_samples": [
+                0.0018,
+                0.001708,
+                0.001674,
+                0.001618,
+                0.00161,
+                0.00158,
+                0.001583,
+                0.001565,
+                0.001568,
+                0.001567,
+                0.001554,
+                0.001554,
+                0.001565,
+                0.001563,
+                0.001554,
+                0.001557
+              ],
+              "wall_seconds_samples": [
+                0.001803875,
+                0.001710833,
+                0.001674792,
+                0.001621542,
+                0.001613583,
+                0.001582583,
+                0.00158725,
+                0.001567917,
+                0.001568583,
+                0.001570458,
+                0.0015535,
+                0.00155775,
+                0.001567709,
+                0.00156575,
+                0.001557875,
+                0.00155775
+              ]
+            },
+            {
+              "policy": "pairwise_logistic",
+              "capacity_items": 157,
+              "median_cpu_seconds": 0.001731,
+              "median_wall_seconds": 0.001734604,
+              "requests_per_second": 21372601.469845567,
+              "peak_accounted_bytes": 16376,
+              "model_bytes": 2096,
+              "cpu_seconds_samples": [
+                0.001924,
+                0.001853,
+                0.001795,
+                0.001779,
+                0.001766,
+                0.001742,
+                0.001733,
+                0.001726,
+                0.001728,
+                0.001736,
+                0.001724,
+                0.001715,
+                0.001724,
+                0.001714,
+                0.001729,
+                0.001723
+              ],
+              "wall_seconds_samples": [
+                0.001927791,
+                0.00185675,
+                0.001799166,
+                0.001782209,
+                0.001766166,
+                0.001746834,
+                0.001736333,
+                0.001727042,
+                0.001730917,
+                0.001738,
+                0.001727208,
+                0.001716792,
+                0.00172825,
+                0.001715208,
+                0.001732875,
+                0.001727125
+              ]
+            }
+          ]
+        },
+        {
+          "requests": 37073,
+          "benchmark_rounds": 16,
+          "budget_bytes": 24576,
+          "results": [
+            {
+              "policy": "sieve",
+              "hits": 10150,
+              "misses": 26923,
+              "evictions": 26591,
+              "miss_rate": 0.7262158444150729
+            },
+            {
+              "policy": "pairwise_logistic",
+              "hits": 9597,
+              "misses": 27476,
+              "evictions": 27237,
+              "miss_rate": 0.7411323604779759,
+              "victim_swaps": 58,
+              "model_calls": 27237,
+              "model_calls_per_eviction": 1
+            }
+          ],
+          "performance": [
+            {
+              "policy": "sieve",
+              "capacity_items": 332,
+              "median_cpu_seconds": 0.001475,
+              "median_wall_seconds": 0.0014769585000000002,
+              "requests_per_second": 25100908.38706707,
+              "peak_accounted_bytes": 24544,
+              "model_bytes": 0,
+              "cpu_seconds_samples": [
+                0.001698,
+                0.001603,
+                0.001574,
+                0.001533,
+                0.001509,
+                0.001489,
+                0.001479,
+                0.001477,
+                0.001466,
+                0.001473,
+                0.001445,
+                0.001449,
+                0.001438,
+                0.001442,
+                0.001436,
+                0.001441
+              ],
+              "wall_seconds_samples": [
+                0.001701625,
+                0.001607167,
+                0.001577667,
+                0.001536084,
+                0.001509541,
+                0.001493084,
+                0.001482333,
+                0.00148075,
+                0.001469042,
+                0.001473167,
+                0.001448542,
+                0.00145,
+                0.001442416,
+                0.001445625,
+                0.001437291,
+                0.001441958
+              ]
+            },
+            {
+              "policy": "pairwise_logistic",
+              "capacity_items": 239,
+              "median_cpu_seconds": 0.001562,
+              "median_wall_seconds": 0.0015648749999999999,
+              "requests_per_second": 23690710.120616663,
+              "peak_accounted_bytes": 24536,
+              "model_bytes": 2096,
+              "cpu_seconds_samples": [
+                0.001759,
+                0.001702,
+                0.001628,
+                0.001618,
+                0.001592,
+                0.001576,
+                0.001582,
+                0.001563,
+                0.001561,
+                0.001554,
+                0.001553,
+                0.001561,
+                0.001551,
+                0.001551,
+                0.00155,
+                0.001553
+              ],
+              "wall_seconds_samples": [
+                0.001762625,
+                0.001705542,
+                0.001632,
+                0.001618042,
+                0.001594875,
+                0.001577958,
+                0.001581875,
+                0.00156675,
+                0.001563,
+                0.001554583,
+                0.001557,
+                0.001562333,
+                0.001554542,
+                0.001554375,
+                0.001552583,
+                0.001556208
+              ]
+            }
+          ]
+        },
+        {
+          "requests": 37073,
+          "benchmark_rounds": 16,
+          "budget_bytes": 40960,
+          "results": [
+            {
+              "policy": "sieve",
+              "hits": 11606,
+              "misses": 25467,
+              "evictions": 24929,
+              "miss_rate": 0.6869419793380628
+            },
+            {
+              "policy": "pairwise_logistic",
+              "hits": 10864,
+              "misses": 26209,
+              "evictions": 25812,
+              "miss_rate": 0.706956545194616,
+              "victim_swaps": 35,
+              "model_calls": 25812,
+              "model_calls_per_eviction": 1
+            }
+          ],
+          "performance": [
+            {
+              "policy": "sieve",
+              "capacity_items": 538,
+              "median_cpu_seconds": 0.0013635,
+              "median_wall_seconds": 0.001364021,
+              "requests_per_second": 27179200.320229676,
+              "peak_accounted_bytes": 40928,
+              "model_bytes": 0,
+              "cpu_seconds_samples": [
+                0.001584,
+                0.001512,
+                0.001472,
+                0.001429,
+                0.001399,
+                0.001366,
+                0.001371,
+                0.001365,
+                0.001362,
+                0.00136,
+                0.001353,
+                0.001352,
+                0.001333,
+                0.001338,
+                0.001336,
+                0.00134
+              ],
+              "wall_seconds_samples": [
+                0.001585625,
+                0.001515125,
+                0.001475125,
+                0.001428916,
+                0.001399417,
+                0.001369833,
+                0.001373625,
+                0.00136525,
+                0.001362792,
+                0.001362041,
+                0.001356708,
+                0.0013525,
+                0.001337209,
+                0.001342417,
+                0.001337417,
+                0.0013435
+              ]
+            },
+            {
+              "policy": "pairwise_logistic",
+              "capacity_items": 397,
+              "median_cpu_seconds": 0.001802,
+              "median_wall_seconds": 0.001802875,
+              "requests_per_second": 20563267.00409069,
+              "peak_accounted_bytes": 37176,
+              "model_bytes": 2096,
+              "cpu_seconds_samples": [
+                0.001991,
+                0.001964,
+                0.00187,
+                0.001852,
+                0.001835,
+                0.001815,
+                0.001807,
+                0.001807,
+                0.001797,
+                0.001793,
+                0.001793,
+                0.001787,
+                0.00179,
+                0.001793,
+                0.001788,
+                0.001791
+              ],
+              "wall_seconds_samples": [
+                0.00199225,
+                0.001968541,
+                0.001873417,
+                0.0018555,
+                0.001835458,
+                0.001818,
+                0.001809833,
+                0.001807125,
+                0.001798625,
+                0.001794083,
+                0.001797208,
+                0.001791167,
+                0.001793167,
+                0.001792833,
+                0.001788666,
+                0.001794666
+              ]
+            }
+          ]
+        },
+        {
+          "requests": 37073,
+          "benchmark_rounds": 16,
+          "budget_bytes": 65536,
+          "results": [
+            {
+              "policy": "sieve",
+              "hits": 12772,
+              "misses": 24301,
+              "evictions": 23504,
+              "miss_rate": 0.6554905187063361
+            },
+            {
+              "policy": "pairwise_logistic",
+              "hits": 12656,
+              "misses": 24417,
+              "evictions": 23706,
+              "miss_rate": 0.6586194804844496,
+              "victim_swaps": 20,
+              "model_calls": 23706,
+              "model_calls_per_eviction": 1
+            }
+          ],
+          "performance": [
+            {
+              "policy": "sieve",
+              "capacity_items": 797,
+              "median_cpu_seconds": 0.001482,
+              "median_wall_seconds": 0.0014856465,
+              "requests_per_second": 24954119.300923876,
+              "peak_accounted_bytes": 57504,
+              "model_bytes": 0,
+              "cpu_seconds_samples": [
+                0.001652,
+                0.001591,
+                0.00155,
+                0.001495,
+                0.0015,
+                0.001469,
+                0.001461,
+                0.00145,
+                0.001446,
+                0.001427,
+                0.001433,
+                0.001428,
+                0.001433,
+                0.00175,
+                0.001628,
+                0.001525
+              ],
+              "wall_seconds_samples": [
+                0.001656,
+                0.001594958,
+                0.001551083,
+                0.001499209,
+                0.001503459,
+                0.001472084,
+                0.0014615,
+                0.001453,
+                0.001447042,
+                0.001430375,
+                0.0014335,
+                0.001430416,
+                0.0014345,
+                0.001754334,
+                0.00163225,
+                0.001528834
+              ]
+            },
+            {
+              "policy": "pairwise_logistic",
+              "capacity_items": 711,
+              "median_cpu_seconds": 0.0018445,
+              "median_wall_seconds": 0.0018482289999999998,
+              "requests_per_second": 20058661.561960127,
+              "peak_accounted_bytes": 65496,
+              "model_bytes": 2096,
+              "cpu_seconds_samples": [
+                0.002006,
+                0.001951,
+                0.001876,
+                0.001857,
+                0.001832,
+                0.001824,
+                0.001816,
+                0.001813,
+                0.001812,
+                0.00182,
+                0.001805,
+                0.0018,
+                0.002074,
+                0.001993,
+                0.002056,
+                0.001979
+              ],
+              "wall_seconds_samples": [
+                0.002009709,
+                0.001954167,
+                0.001880167,
+                0.001860875,
+                0.001835583,
+                0.001826083,
+                0.001818417,
+                0.001816542,
+                0.001812667,
+                0.001823125,
+                0.00180825,
+                0.0018035,
+                0.002076916,
+                0.0019955,
+                0.002059166,
+                0.001981792
+              ]
+            }
+          ]
+        },
+        {
+          "requests": 37073,
+          "benchmark_rounds": 16,
+          "budget_bytes": 98304,
+          "results": [
+            {
+              "policy": "sieve",
+              "hits": 14341,
+              "misses": 22732,
+              "evictions": 21398,
+              "miss_rate": 0.6131686132765085
+            },
+            {
+              "policy": "pairwise_logistic",
+              "hits": 13827,
+              "misses": 23246,
+              "evictions": 22205,
+              "miss_rate": 0.627033150810563,
+              "victim_swaps": 10,
+              "model_calls": 22205,
+              "model_calls_per_eviction": 1
+            }
+          ],
+          "performance": [
+            {
+              "policy": "sieve",
+              "capacity_items": 1334,
+              "median_cpu_seconds": 0.001399,
+              "median_wall_seconds": 0.0014025415,
+              "requests_per_second": 26432729.441517416,
+              "peak_accounted_bytes": 98272,
+              "model_bytes": 0,
+              "cpu_seconds_samples": [
+                0.001617,
+                0.001546,
+                0.001503,
+                0.001461,
+                0.001441,
+                0.001529,
+                0.001467,
+                0.001411,
+                0.001387,
+                0.001363,
+                0.001354,
+                0.001339,
+                0.001331,
+                0.001326,
+                0.001315,
+                0.001319
+              ],
+              "wall_seconds_samples": [
+                0.001619458,
+                0.001549708,
+                0.001503709,
+                0.001462125,
+                0.001445125,
+                0.00153175,
+                0.001468541,
+                0.001414083,
+                0.001391,
+                0.001367709,
+                0.00135425,
+                0.00134325,
+                0.001330875,
+                0.00132625,
+                0.001319334,
+                0.001320334
+              ]
+            },
+            {
+              "policy": "pairwise_logistic",
+              "capacity_items": 1041,
+              "median_cpu_seconds": 0.001732,
+              "median_wall_seconds": 0.001733271,
+              "requests_per_second": 21389038.413496792,
+              "peak_accounted_bytes": 98296,
+              "model_bytes": 2096,
+              "cpu_seconds_samples": [
+                0.001935,
+                0.0019,
+                0.001847,
+                0.001828,
+                0.001818,
+                0.001827,
+                0.001769,
+                0.001749,
+                0.001715,
+                0.001708,
+                0.001697,
+                0.00169,
+                0.001695,
+                0.001684,
+                0.00168,
+                0.001667
+              ],
+              "wall_seconds_samples": [
+                0.001939667,
+                0.001903917,
+                0.001850542,
+                0.001831959,
+                0.001819125,
+                0.001828833,
+                0.001769791,
+                0.001752167,
+                0.001714375,
+                0.001711125,
+                0.001700125,
+                0.001693333,
+                0.001698125,
+                0.001687666,
+                0.0016805,
+                0.001670041
+              ]
+            }
+          ]
+        }
+      ],
+      "break_even_at_40_kib": {
+        "sieve_miss_target": 25467,
+        "max_capacity_scanned": 1024,
+        "first_match": {
+          "capacity_items": 484,
+          "misses": 25465,
+          "peak_prefill_bytes": 47336
+        }
+      },
+      "sqlite": [
+        {
+          "backend": "temporary_sqlite",
+          "sqlite_version": "3.51.0",
+          "budget_bytes": 40960,
+          "requests": 37073,
+          "profiles": 16915,
+          "profile_bytes": 256,
+          "demo_rounds": 16,
+          "results": [
+            {
+              "policy": "sieve",
+              "backend_calls": 29602,
+              "model_calls": 0,
+              "mean_latency_us": 0.371545923,
+              "p50_latency_us": 0.417,
+              "p95_latency_us": 0.583,
+              "median_cpu_seconds": 0.0149655
+            },
+            {
+              "policy": "pairwise_logistic",
+              "backend_calls": 29543,
+              "model_calls": 29433,
+              "mean_latency_us": 0.370340652,
+              "p50_latency_us": 0.417,
+              "p95_latency_us": 0.583,
+              "median_cpu_seconds": 0.014924
+            }
+          ],
+          "memory": [
+            {
+              "policy": "sieve",
+              "capacity_items": 122,
+              "peak_accounted_bytes": 40704,
+              "model_bytes": 0
+            },
+            {
+              "policy": "pairwise_logistic",
+              "capacity_items": 110,
+              "peak_accounted_bytes": 40736,
+              "model_bytes": 2096
+            }
+          ]
+        },
+        {
+          "backend": "temporary_sqlite",
+          "sqlite_version": "3.51.0",
+          "budget_bytes": 65536,
+          "requests": 37073,
+          "profiles": 16915,
+          "profile_bytes": 256,
+          "demo_rounds": 16,
+          "results": [
+            {
+              "policy": "sieve",
+              "backend_calls": 28354,
+              "model_calls": 0,
+              "mean_latency_us": 0.378777776,
+              "p50_latency_us": 0.458,
+              "p95_latency_us": 0.6045,
+              "median_cpu_seconds": 0.015241
+            },
+            {
+              "policy": "pairwise_logistic",
+              "backend_calls": 28271,
+              "model_calls": 28088,
+              "mean_latency_us": 0.378873776,
+              "p50_latency_us": 0.458,
+              "p95_latency_us": 0.6045,
+              "median_cpu_seconds": 0.01525
+            }
+          ],
+          "memory": [
+            {
+              "policy": "sieve",
+              "capacity_items": 197,
+              "peak_accounted_bytes": 64704,
+              "model_bytes": 0
+            },
+            {
+              "policy": "pairwise_logistic",
+              "capacity_items": 183,
+              "peak_accounted_bytes": 65264,
+              "model_bytes": 2096
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "workload": "Meta KV 202206 later window",
+      "source": {
+        "source_file": "meta-kv-202206-prefix.csv",
+        "source_start_row": 200001,
+        "source_end_row": 300000,
+        "source_slice_sha256": "cfa183f82ef3c36c25f8682e4e2148b9a4d460c2c96e454f4612222b04acabf2",
+        "operation_rows": {
+          "SET": 18037,
+          "GET": 81040,
+          "DELETE": 923
+        },
+        "read_count": 144192,
+        "distinct_read_keys": 49855
+      },
+      "victim_parity_at_128_items": {
+        "requests": 144192,
+        "matching_evictions": 72428,
+        "original_history_bytes": 32,
+        "compact_history_bytes": 16
+      },
+      "equal_items": {
+        "requests": 144192,
+        "benchmark_rounds": 16,
+        "capacity_items": 128,
+        "results": [
+          {
+            "policy": "sieve",
+            "hits": 71624,
+            "misses": 72568,
+            "evictions": 72440,
+            "miss_rate": 0.5032734132268087
+          },
+          {
+            "policy": "pairwise_logistic",
+            "hits": 71636,
+            "misses": 72556,
+            "evictions": 72428,
+            "miss_rate": 0.5031901908566356,
+            "victim_swaps": 638,
+            "model_calls": 72428,
+            "model_calls_per_eviction": 1
+          }
+        ],
+        "performance": [
+          {
+            "policy": "sieve",
+            "capacity_items": 128,
+            "median_cpu_seconds": 0.0035694999999999998,
+            "median_wall_seconds": 0.00357175,
+            "requests_per_second": 40370126.68859803,
+            "peak_accounted_bytes": 9888,
+            "model_bytes": 0,
+            "cpu_seconds_samples": [
+              0.003859,
+              0.003733,
+              0.003688,
+              0.003641,
+              0.003608,
+              0.003579,
+              0.003566,
+              0.003564,
+              0.003571,
+              0.003563,
+              0.003568,
+              0.003558,
+              0.003546,
+              0.003582,
+              0.003557,
+              0.003566
+            ],
+            "wall_seconds_samples": [
+              0.003863208,
+              0.003737375,
+              0.003691958,
+              0.003644834,
+              0.003608166,
+              0.0035825,
+              0.003569459,
+              0.003565084,
+              0.003573833,
+              0.003567416,
+              0.003569667,
+              0.003562292,
+              0.0035495,
+              0.0035865,
+              0.00356125,
+              0.003569417
+            ]
+          },
+          {
+            "policy": "pairwise_logistic",
+            "capacity_items": 128,
+            "median_cpu_seconds": 0.004488,
+            "median_wall_seconds": 0.0044915005000000004,
+            "requests_per_second": 32103302.671345577,
+            "peak_accounted_bytes": 14056,
+            "model_bytes": 2096,
+            "cpu_seconds_samples": [
+              0.004623,
+              0.004553,
+              0.004676,
+              0.004564,
+              0.004521,
+              0.004506,
+              0.004497,
+              0.004487,
+              0.004489,
+              0.004473,
+              0.004477,
+              0.004473,
+              0.004483,
+              0.004465,
+              0.00447,
+              0.004483
+            ],
+            "wall_seconds_samples": [
+              0.004625292,
+              0.004557209,
+              0.00467875,
+              0.004568,
+              0.004524583,
+              0.004509959,
+              0.004500458,
+              0.004490167,
+              0.004492834,
+              0.004477,
+              0.004476625,
+              0.004475875,
+              0.004483084,
+              0.004468208,
+              0.004472958,
+              0.004483625
+            ]
+          }
+        ]
+      },
+      "memory_sweep": [
+        {
+          "requests": 144192,
+          "benchmark_rounds": 16,
+          "budget_bytes": 16384,
+          "results": [
+            {
+              "policy": "sieve",
+              "hits": 71640,
+              "misses": 72552,
+              "evictions": 72355,
+              "miss_rate": 0.5031624500665779
+            },
+            {
+              "policy": "pairwise_logistic",
+              "hits": 71648,
+              "misses": 72544,
+              "evictions": 72387,
+              "miss_rate": 0.5031069684864625,
+              "victim_swaps": 510,
+              "model_calls": 72387,
+              "model_calls_per_eviction": 1
+            }
+          ],
+          "performance": [
+            {
+              "policy": "sieve",
+              "capacity_items": 197,
+              "median_cpu_seconds": 0.004122499999999999,
+              "median_wall_seconds": 0.0041264375,
+              "requests_per_second": 34943459.097587205,
+              "peak_accounted_bytes": 14304,
+              "model_bytes": 0,
+              "cpu_seconds_samples": [
+                0.004418,
+                0.004351,
+                0.004234,
+                0.00417,
+                0.004148,
+                0.004144,
+                0.004122,
+                0.004117,
+                0.004119,
+                0.004107,
+                0.004114,
+                0.004123,
+                0.004112,
+                0.004116,
+                0.004138,
+                0.004122
+              ],
+              "wall_seconds_samples": [
+                0.004421708,
+                0.00435575,
+                0.004237625,
+                0.004174084,
+                0.00415175,
+                0.004147333,
+                0.004126208,
+                0.004120917,
+                0.004121792,
+                0.004110834,
+                0.0041175,
+                0.004126667,
+                0.004115375,
+                0.004116834,
+                0.004141542,
+                0.004121916
+              ]
+            },
+            {
+              "policy": "pairwise_logistic",
+              "capacity_items": 157,
+              "median_cpu_seconds": 0.0047685,
+              "median_wall_seconds": 0.004772854,
+              "requests_per_second": 30210854.97272701,
+              "peak_accounted_bytes": 16376,
+              "model_bytes": 2096,
+              "cpu_seconds_samples": [
+                0.005041,
+                0.004898,
+                0.004829,
+                0.004777,
+                0.00478,
+                0.00476,
+                0.004829,
+                0.00475,
+                0.00475,
+                0.004739,
+                0.004816,
+                0.004727,
+                0.004743,
+                0.004949,
+                0.004742,
+                0.004744
+              ],
+              "wall_seconds_samples": [
+                0.005045084,
+                0.00489925,
+                0.004829542,
+                0.004780625,
+                0.004783375,
+                0.004765083,
+                0.004831625,
+                0.0047545,
+                0.00475275,
+                0.004741708,
+                0.00482,
+                0.004730667,
+                0.004743083,
+                0.005002083,
+                0.004745958,
+                0.004746834
+              ]
+            }
+          ]
+        },
+        {
+          "requests": 144192,
+          "benchmark_rounds": 16,
+          "budget_bytes": 24576,
+          "results": [
+            {
+              "policy": "sieve",
+              "hits": 71676,
+              "misses": 72516,
+              "evictions": 72184,
+              "miss_rate": 0.5029127829560586
+            },
+            {
+              "policy": "pairwise_logistic",
+              "hits": 71669,
+              "misses": 72523,
+              "evictions": 72284,
+              "miss_rate": 0.5029613293386596,
+              "victim_swaps": 328,
+              "model_calls": 72284,
+              "model_calls_per_eviction": 1
+            }
+          ],
+          "performance": [
+            {
+              "policy": "sieve",
+              "capacity_items": 332,
+              "median_cpu_seconds": 0.003987,
+              "median_wall_seconds": 0.003991354,
+              "requests_per_second": 36126086.53604767,
+              "peak_accounted_bytes": 24544,
+              "model_bytes": 0,
+              "cpu_seconds_samples": [
+                0.004217,
+                0.004127,
+                0.004015,
+                0.003962,
+                0.003962,
+                0.004047,
+                0.003941,
+                0.003952,
+                0.003899,
+                0.004184,
+                0.004054,
+                0.003976,
+                0.00394,
+                0.003999,
+                0.003998,
+                0.003902
+              ],
+              "wall_seconds_samples": [
+                0.004221542,
+                0.004129958,
+                0.00401875,
+                0.003962167,
+                0.003965625,
+                0.004047125,
+                0.003942625,
+                0.003953958,
+                0.003902542,
+                0.004187833,
+                0.004057625,
+                0.003979875,
+                0.003940667,
+                0.004002833,
+                0.004007625,
+                0.003905792
+              ]
+            },
+            {
+              "policy": "pairwise_logistic",
+              "capacity_items": 239,
+              "median_cpu_seconds": 0.00476,
+              "median_wall_seconds": 0.004762354,
+              "requests_per_second": 30277463.624081705,
+              "peak_accounted_bytes": 24536,
+              "model_bytes": 2096,
+              "cpu_seconds_samples": [
+                0.00489,
+                0.004979,
+                0.004941,
+                0.004841,
+                0.004785,
+                0.004782,
+                0.004732,
+                0.004685,
+                0.004857,
+                0.004814,
+                0.004738,
+                0.004708,
+                0.004674,
+                0.004679,
+                0.00468,
+                0.004702
+              ],
+              "wall_seconds_samples": [
+                0.004893958,
+                0.004987209,
+                0.004941,
+                0.004845375,
+                0.004784625,
+                0.004782375,
+                0.00473225,
+                0.0046855,
+                0.004865875,
+                0.004814917,
+                0.004742333,
+                0.004708375,
+                0.004678042,
+                0.004680792,
+                0.00468325,
+                0.004704
+              ]
+            }
+          ]
+        },
+        {
+          "requests": 144192,
+          "benchmark_rounds": 16,
+          "budget_bytes": 40960,
+          "results": [
+            {
+              "policy": "sieve",
+              "hits": 72949,
+              "misses": 71243,
+              "evictions": 70705,
+              "miss_rate": 0.4940842765201953
+            },
+            {
+              "policy": "pairwise_logistic",
+              "hits": 71930,
+              "misses": 72262,
+              "evictions": 71865,
+              "miss_rate": 0.5011512427873945,
+              "victim_swaps": 181,
+              "model_calls": 71865,
+              "model_calls_per_eviction": 1
+            }
+          ],
+          "performance": [
+            {
+              "policy": "sieve",
+              "capacity_items": 538,
+              "median_cpu_seconds": 0.0038015,
+              "median_wall_seconds": 0.0038050415,
+              "requests_per_second": 37894987.4791116,
+              "peak_accounted_bytes": 40928,
+              "model_bytes": 0,
+              "cpu_seconds_samples": [
+                0.003945,
+                0.003808,
+                0.003795,
+                0.003741,
+                0.003733,
+                0.003955,
+                0.003901,
+                0.003871,
+                0.003766,
+                0.00374,
+                0.003704,
+                0.004025,
+                0.003912,
+                0.003896,
+                0.003779,
+                0.003695
+              ],
+              "wall_seconds_samples": [
+                0.003948916,
+                0.003811875,
+                0.003798208,
+                0.003741291,
+                0.003733459,
+                0.003961292,
+                0.0039025,
+                0.003873666,
+                0.003767291,
+                0.003743209,
+                0.003706833,
+                0.004026,
+                0.003915625,
+                0.003897833,
+                0.003785291,
+                0.003699042
+              ]
+            },
+            {
+              "policy": "pairwise_logistic",
+              "capacity_items": 397,
+              "median_cpu_seconds": 0.005601500000000001,
+              "median_wall_seconds": 0.005607479,
+              "requests_per_second": 25714229.157166705,
+              "peak_accounted_bytes": 37176,
+              "model_bytes": 2096,
+              "cpu_seconds_samples": [
+                0.005684,
+                0.005603,
+                0.005554,
+                0.005524,
+                0.005505,
+                0.005502,
+                0.005949,
+                0.005794,
+                0.005683,
+                0.005553,
+                0.0056,
+                0.005864,
+                0.005837,
+                0.005667,
+                0.005536,
+                0.005568
+              ],
+              "wall_seconds_samples": [
+                0.005688667,
+                0.005606125,
+                0.0055555,
+                0.005524583,
+                0.005505542,
+                0.005502708,
+                0.005950083,
+                0.005798083,
+                0.005687541,
+                0.005553084,
+                0.005608833,
+                0.00586775,
+                0.005839875,
+                0.005667833,
+                0.005539458,
+                0.005569584
+              ]
+            }
+          ]
+        },
+        {
+          "requests": 144192,
+          "benchmark_rounds": 16,
+          "budget_bytes": 65536,
+          "results": [
+            {
+              "policy": "sieve",
+              "hits": 74178,
+              "misses": 70014,
+              "evictions": 69217,
+              "miss_rate": 0.4855609187749667
+            },
+            {
+              "policy": "pairwise_logistic",
+              "hits": 73777,
+              "misses": 70415,
+              "evictions": 69704,
+              "miss_rate": 0.48834193297825124,
+              "victim_swaps": 120,
+              "model_calls": 69704,
+              "model_calls_per_eviction": 1
+            }
+          ],
+          "performance": [
+            {
+              "policy": "sieve",
+              "capacity_items": 797,
+              "median_cpu_seconds": 0.0043015,
+              "median_wall_seconds": 0.0043029999999999995,
+              "requests_per_second": 33509644.434115738,
+              "peak_accounted_bytes": 57504,
+              "model_bytes": 0,
+              "cpu_seconds_samples": [
+                0.004533,
+                0.004543,
+                0.004323,
+                0.004443,
+                0.004306,
+                0.004534,
+                0.004336,
+                0.004297,
+                0.004288,
+                0.004254,
+                0.00419,
+                0.004212,
+                0.004216,
+                0.004198,
+                0.00422,
+                0.004436
+              ],
+              "wall_seconds_samples": [
+                0.004536583,
+                0.004544917,
+                0.004324666,
+                0.004444416,
+                0.004306333,
+                0.004538125,
+                0.004339792,
+                0.004299667,
+                0.004297167,
+                0.004260958,
+                0.004190625,
+                0.004216209,
+                0.004217542,
+                0.004199459,
+                0.00422375,
+                0.004441042
+              ]
+            },
+            {
+              "policy": "pairwise_logistic",
+              "capacity_items": 711,
+              "median_cpu_seconds": 0.0057535,
+              "median_wall_seconds": 0.005757521,
+              "requests_per_second": 25044111.866895493,
+              "peak_accounted_bytes": 65496,
+              "model_bytes": 2096,
+              "cpu_seconds_samples": [
+                0.00591,
+                0.005838,
+                0.006018,
+                0.005796,
+                0.005757,
+                0.005812,
+                0.00575,
+                0.005698,
+                0.005713,
+                0.005705,
+                0.0057,
+                0.005695,
+                0.005696,
+                0.005716,
+                0.005869,
+                0.006015
+              ],
+              "wall_seconds_samples": [
+                0.0059145,
+                0.005865459,
+                0.006021667,
+                0.005799958,
+                0.0057635,
+                0.005813875,
+                0.005751542,
+                0.005702042,
+                0.005712916,
+                0.005704875,
+                0.005703708,
+                0.005702917,
+                0.005700833,
+                0.0057195,
+                0.005874125,
+                0.006019584
+              ]
+            }
+          ]
+        },
+        {
+          "requests": 144192,
+          "benchmark_rounds": 16,
+          "budget_bytes": 98304,
+          "results": [
+            {
+              "policy": "sieve",
+              "hits": 75932,
+              "misses": 68260,
+              "evictions": 66926,
+              "miss_rate": 0.4733965823346649
+            },
+            {
+              "policy": "pairwise_logistic",
+              "hits": 74995,
+              "misses": 69197,
+              "evictions": 68156,
+              "miss_rate": 0.4798948624056813,
+              "victim_swaps": 99,
+              "model_calls": 68156,
+              "model_calls_per_eviction": 1
+            }
+          ],
+          "performance": [
+            {
+              "policy": "sieve",
+              "capacity_items": 1334,
+              "median_cpu_seconds": 0.004265,
+              "median_wall_seconds": 0.0042694585,
+              "requests_per_second": 33772901.177046224,
+              "peak_accounted_bytes": 98272,
+              "model_bytes": 0,
+              "cpu_seconds_samples": [
+                0.004368,
+                0.004307,
+                0.004315,
+                0.004371,
+                0.004207,
+                0.004456,
+                0.004275,
+                0.004264,
+                0.004204,
+                0.00416,
+                0.004266,
+                0.004173,
+                0.004082,
+                0.004314,
+                0.004176,
+                0.004104
+              ],
+              "wall_seconds_samples": [
+                0.00437175,
+                0.004310208,
+                0.004314708,
+                0.004374333,
+                0.004210291,
+                0.004457334,
+                0.004279375,
+                0.004268708,
+                0.004208959,
+                0.004169583,
+                0.004270209,
+                0.004181542,
+                0.004085958,
+                0.004317875,
+                0.004176417,
+                0.004104125
+              ]
+            },
+            {
+              "policy": "pairwise_logistic",
+              "capacity_items": 1041,
+              "median_cpu_seconds": 0.005468499999999999,
+              "median_wall_seconds": 0.005469667,
+              "requests_per_second": 26362116.743121658,
+              "peak_accounted_bytes": 98296,
+              "model_bytes": 2096,
+              "cpu_seconds_samples": [
+                0.005647,
+                0.005471,
+                0.005617,
+                0.005462,
+                0.005497,
+                0.005499,
+                0.005601,
+                0.005449,
+                0.005367,
+                0.00525,
+                0.005467,
+                0.00547,
+                0.005309,
+                0.00537,
+                0.00553,
+                0.005228
+              ],
+              "wall_seconds_samples": [
+                0.005647291,
+                0.005471709,
+                0.005620167,
+                0.005467625,
+                0.00550375,
+                0.005502083,
+                0.005604791,
+                0.005451083,
+                0.005368834,
+                0.005253167,
+                0.00546725,
+                0.005474,
+                0.005313375,
+                0.005376292,
+                0.00553375,
+                0.00523675
+              ]
+            }
+          ]
+        }
+      ],
+      "break_even_at_40_kib": {
+        "sieve_miss_target": 71243,
+        "max_capacity_scanned": 1024,
+        "first_match": {
+          "capacity_items": 535,
+          "misses": 71238,
+          "peak_prefill_bytes": 51416
+        }
+      },
+      "sqlite": [
+        {
+          "backend": "temporary_sqlite",
+          "sqlite_version": "3.51.0",
+          "budget_bytes": 40960,
+          "requests": 144192,
+          "profiles": 49855,
+          "profile_bytes": 256,
+          "demo_rounds": 16,
+          "results": [
+            {
+              "policy": "sieve",
+              "backend_calls": 72577,
+              "model_calls": 0,
+              "mean_latency_us": 0.258985731,
+              "p50_latency_us": 0.375,
+              "p95_latency_us": 0.625,
+              "median_cpu_seconds": 0.041978
+            },
+            {
+              "policy": "pairwise_logistic",
+              "backend_calls": 72571,
+              "model_calls": 72461,
+              "mean_latency_us": 0.263431893,
+              "p50_latency_us": 0.375,
+              "p95_latency_us": 0.625,
+              "median_cpu_seconds": 0.0426205
+            }
+          ],
+          "memory": [
+            {
+              "policy": "sieve",
+              "capacity_items": 122,
+              "peak_accounted_bytes": 40704,
+              "model_bytes": 0
+            },
+            {
+              "policy": "pairwise_logistic",
+              "capacity_items": 110,
+              "peak_accounted_bytes": 40736,
+              "model_bytes": 2096
+            }
+          ]
+        },
+        {
+          "backend": "temporary_sqlite",
+          "sqlite_version": "3.51.0",
+          "budget_bytes": 65536,
+          "requests": 144192,
+          "profiles": 49855,
+          "profile_bytes": 256,
+          "demo_rounds": 16,
+          "results": [
+            {
+              "policy": "sieve",
+              "backend_calls": 72552,
+              "model_calls": 0,
+              "mean_latency_us": 0.26639524,
+              "p50_latency_us": 0.375,
+              "p95_latency_us": 0.625,
+              "median_cpu_seconds": 0.043047
+            },
+            {
+              "policy": "pairwise_logistic",
+              "backend_calls": 72540,
+              "model_calls": 72357,
+              "mean_latency_us": 0.265323569,
+              "p50_latency_us": 0.375,
+              "p95_latency_us": 0.625,
+              "median_cpu_seconds": 0.042899
+            }
+          ],
+          "memory": [
+            {
+              "policy": "sieve",
+              "capacity_items": 197,
+              "peak_accounted_bytes": 64704,
+              "model_bytes": 0
+            },
+            {
+              "policy": "pairwise_logistic",
+              "capacity_items": 183,
+              "peak_accounted_bytes": 65264,
+              "model_bytes": 2096
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

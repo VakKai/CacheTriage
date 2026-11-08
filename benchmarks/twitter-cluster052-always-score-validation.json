@@ -1,0 +1,57 @@
+{
+  "distinct_read_keys": 37538,
+  "model_file": "twitter-cluster052-reuse-v1.txt",
+  "model_sha256": "7acba094005c67752591283d1e597e2f9673cf1f54cb59f2b5a87937fb87d60c",
+  "operations": {
+    "add": 4423,
+    "cas": 2467,
+    "delete": 860,
+    "get": 89313,
+    "gets": 2923,
+    "set": 14
+  },
+  "read_count": 92236,
+  "read_timestamp_range_seconds": [
+    0,
+    6
+  ],
+  "replay_first_read": 64566,
+  "replay_last_read": 92236,
+  "replays": [
+    {
+      "capacity_items": 128,
+      "requests": 27671,
+      "results": [
+        {
+          "evictions": 22861,
+          "hits": 4682,
+          "miss_rate": 0.8307975859202775,
+          "misses": 22989,
+          "policy": "lru"
+        },
+        {
+          "evictions": 22603,
+          "hits": 4940,
+          "miss_rate": 0.8214737450760724,
+          "misses": 22731,
+          "policy": "sieve"
+        },
+        {
+          "evictions": 22873,
+          "hits": 4670,
+          "miss_rate": 0.8312312529362871,
+          "misses": 23001,
+          "model_calls": 22873,
+          "model_calls_per_eviction": 1,
+          "policy": "always_score",
+          "victim_swaps": 228
+        }
+      ]
+    }
+  ],
+  "source_end_row": 100000,
+  "source_file": "cluster052.csv",
+  "source_slice_sha256": "175be9b41c1a116ede41d3d6b44a5f6bccc08e68260971a49b9cf669a48d80cd",
+  "source_start_row": 1,
+  "source_timestamp_descents": 11
+}

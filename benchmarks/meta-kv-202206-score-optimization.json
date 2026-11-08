@@ -1,0 +1,453 @@
+{
+  "compiler": "Apple clang version 21.0.0 (clang-2100.4.1.1)",
+  "compiler_flags": "-O2 -std=c++17 -Wall -Wextra -Wpedantic",
+  "gate_max_age_gap_reads": 1,
+  "model_sha256": "7acba094005c67752591283d1e597e2f9673cf1f54cb59f2b5a87937fb87d60c",
+  "optimization": "shared lookup table for log1p counts 0 through 255",
+  "paired_invocations": 4,
+  "platform": "macOS-26.6-arm64-arm-64bit",
+  "rounds_per_binary_invocation": 16,
+  "workloads": [
+    {
+      "replays": [
+        {
+          "capacity_items": 128,
+          "requests": 229690,
+          "results": [
+            {
+              "after_cpu_ms": 7.9247499999999995,
+              "after_cpu_ms_samples": [
+                7.936499999999999,
+                7.883000000000001,
+                7.913,
+                8.001999999999999
+              ],
+              "after_peak_accounted_bytes": 9952,
+              "before_cpu_ms": 7.827250000000001,
+              "before_cpu_ms_samples": [
+                7.59,
+                7.844500000000001,
+                8.054,
+                7.8100000000000005
+              ],
+              "before_peak_accounted_bytes": 9952,
+              "evictions": 73002,
+              "hits": 156560,
+              "miss_rate": 0.3183856502242152,
+              "misses": 73130,
+              "paired_cpu_change_percent": 1.4745882045119951,
+              "paired_cpu_change_percent_samples": [
+                4.565217391304333,
+                0.49078972528522335,
+                -1.750682890489197,
+                2.458386683738767
+              ],
+              "policy": "lru"
+            },
+            {
+              "after_cpu_ms": 8.19975,
+              "after_cpu_ms_samples": [
+                8.1775,
+                8.011500000000002,
+                8.222,
+                8.310999999999998
+              ],
+              "after_peak_accounted_bytes": 9952,
+              "before_cpu_ms": 8.073249999999998,
+              "before_cpu_ms_samples": [
+                7.8925,
+                8.099499999999999,
+                8.276499999999999,
+                8.046999999999999
+              ],
+              "before_peak_accounted_bytes": 9952,
+              "evictions": 72808,
+              "hits": 156754,
+              "miss_rate": 0.3175410335669816,
+              "misses": 72936,
+              "paired_cpu_change_percent": 1.3111174141533677,
+              "paired_cpu_change_percent_samples": [
+                3.6110231232182377,
+                -1.0864868201740485,
+                -0.6584909079924928,
+                3.280725736299228
+              ],
+              "policy": "sieve"
+            },
+            {
+              "after_cpu_ms": 10.24575,
+              "after_cpu_ms_samples": [
+                10.203999999999999,
+                10.118,
+                10.2875,
+                10.4115
+              ],
+              "after_peak_accounted_bytes": 14120,
+              "before_cpu_ms": 12.280000000000001,
+              "before_cpu_ms_samples": [
+                12.279,
+                12.281,
+                12.416,
+                12.2685
+              ],
+              "before_peak_accounted_bytes": 12072,
+              "evictions": 71945,
+              "hits": 157617,
+              "miss_rate": 0.3137837955505246,
+              "misses": 72073,
+              "model_calls": 71945,
+              "model_calls_per_eviction": 1,
+              "paired_cpu_change_percent": -17.020986288875996,
+              "paired_cpu_change_percent_samples": [
+                -16.898770258164355,
+                -17.612572266102113,
+                -17.143202319587637,
+                -15.136324734075068
+              ],
+              "policy": "always_score",
+              "victim_swaps": 12871
+            },
+            {
+              "after_cpu_ms": 9.50375,
+              "after_cpu_ms_samples": [
+                9.467,
+                9.379999999999999,
+                9.5405,
+                9.625499999999999
+              ],
+              "after_peak_accounted_bytes": 14120,
+              "before_cpu_ms": 10.315999999999999,
+              "before_cpu_ms_samples": [
+                10.2495,
+                10.3555,
+                10.4545,
+                10.2765
+              ],
+              "before_peak_accounted_bytes": 12072,
+              "evictions": 72799,
+              "hits": 156763,
+              "miss_rate": 0.3175018503199965,
+              "misses": 72927,
+              "model_calls": 34285,
+              "model_calls_per_eviction": 0.47095427134988116,
+              "paired_cpu_change_percent": -8.188582732086063,
+              "paired_cpu_change_percent_samples": [
+                -7.634518757012532,
+                -9.420114914779587,
+                -8.742646707159595,
+                -6.334841628959287
+              ],
+              "policy": "cachetriage",
+              "victim_swaps": 328
+            }
+          ]
+        },
+        {
+          "capacity_items": 512,
+          "requests": 229690,
+          "results": [
+            {
+              "after_cpu_ms": 7.99325,
+              "after_cpu_ms_samples": [
+                8.017,
+                7.969500000000001,
+                8.0225,
+                7.717
+              ],
+              "after_peak_accounted_bytes": 39328,
+              "before_cpu_ms": 8.045,
+              "before_cpu_ms_samples": [
+                8.07,
+                8.6815,
+                8.02,
+                7.981999999999999
+              ],
+              "before_peak_accounted_bytes": 39328,
+              "evictions": 71404,
+              "hits": 157774,
+              "miss_rate": 0.31310026557534065,
+              "misses": 71916,
+              "paired_cpu_change_percent": -1.9883616700152817,
+              "paired_cpu_change_percent_samples": [
+                -0.6567534076827863,
+                -8.201347693370952,
+                0.03117206982545806,
+                -3.319969932347777
+              ],
+              "policy": "lru"
+            },
+            {
+              "after_cpu_ms": 7.935500000000001,
+              "after_cpu_ms_samples": [
+                7.884,
+                7.987000000000001,
+                8.014000000000001,
+                7.8
+              ],
+              "after_peak_accounted_bytes": 39328,
+              "before_cpu_ms": 8.547,
+              "before_cpu_ms_samples": [
+                8.554,
+                8.913499999999999,
+                8.540000000000001,
+                8.427999999999999
+              ],
+              "before_peak_accounted_bytes": 39328,
+              "evictions": 68505,
+              "hits": 160673,
+              "miss_rate": 0.3004789063520397,
+              "misses": 69017,
+              "paired_cpu_change_percent": -7.641972786526397,
+              "paired_cpu_change_percent_samples": [
+                -7.832592938975913,
+                -10.394345655466408,
+                -6.159250585480091,
+                -7.45135263407688
+              ],
+              "policy": "sieve"
+            },
+            {
+              "after_cpu_ms": 9.94875,
+              "after_cpu_ms_samples": [
+                9.889,
+                10.035499999999999,
+                10.0085,
+                9.818
+              ],
+              "after_peak_accounted_bytes": 49640,
+              "before_cpu_ms": 11.611250000000002,
+              "before_cpu_ms_samples": [
+                11.637500000000001,
+                12.246,
+                11.585,
+                11.5795
+              ],
+              "before_peak_accounted_bytes": 47592,
+              "evictions": 67399,
+              "hits": 161779,
+              "miss_rate": 0.29566372066698593,
+              "misses": 67911,
+              "model_calls": 67399,
+              "model_calls_per_eviction": 1,
+              "paired_cpu_change_percent": -15.118466562982697,
+              "paired_cpu_change_percent_samples": [
+                -15.024704618689599,
+                -18.0507920953781,
+                -13.608113940440237,
+                -15.212228507275793
+              ],
+              "policy": "always_score",
+              "victim_swaps": 9212
+            },
+            {
+              "after_cpu_ms": 9.45775,
+              "after_cpu_ms_samples": [
+                9.457500000000001,
+                9.458000000000002,
+                9.538000000000002,
+                9.282499999999999
+              ],
+              "after_peak_accounted_bytes": 49640,
+              "before_cpu_ms": 10.11575,
+              "before_cpu_ms_samples": [
+                10.128,
+                10.735000000000001,
+                10.1035,
+                10.029
+              ],
+              "before_peak_accounted_bytes": 47592,
+              "evictions": 68554,
+              "hits": 160624,
+              "miss_rate": 0.30069223736340284,
+              "misses": 69066,
+              "model_calls": 32942,
+              "model_calls_per_eviction": 0.4805263004346938,
+              "paired_cpu_change_percent": -7.031837381309842,
+              "paired_cpu_change_percent_samples": [
+                -6.620260663507094,
+                -11.89566837447601,
+                -5.597070322165565,
+                -7.443414099112589
+              ],
+              "policy": "cachetriage",
+              "victim_swaps": 174
+            }
+          ]
+        }
+      ],
+      "source": {
+        "distinct_read_keys": 45031,
+        "download_byte_range": [
+          0,
+          8388607
+        ],
+        "operation_rows": {
+          "DELETE": 964,
+          "GET": 82400,
+          "SET": 16636
+        },
+        "read_count": 229690,
+        "source_end_row": 100000,
+        "source_file": "meta-kv-202206-prefix.csv",
+        "source_slice_sha256": "9c736f9db21175d9b201a1e20051d2c3f206d6c7f67f2f86fc1f8c99e84bfbf9",
+        "source_start_row": 1,
+        "source_url": "https://cachelib-workload-sharing.s3.amazonaws.com/pub/kvcache/202206/kvcache_traces_1.csv"
+      },
+      "workload": "Meta KV 202206"
+    },
+    {
+      "replays": [
+        {
+          "capacity_items": 128,
+          "requests": 99284,
+          "results": [
+            {
+              "after_cpu_ms": 8.55075,
+              "after_cpu_ms_samples": [
+                9.8005,
+                8.102,
+                8.999500000000001,
+                7.889
+              ],
+              "after_peak_accounted_bytes": 9952,
+              "before_cpu_ms": 8.203500000000002,
+              "before_cpu_ms_samples": [
+                8.143,
+                8.264000000000001,
+                8.358999999999998,
+                7.815499999999999
+              ],
+              "before_peak_accounted_bytes": 9952,
+              "evictions": 69332,
+              "hits": 29824,
+              "miss_rate": 0.6996092018855001,
+              "misses": 69460,
+              "paired_cpu_change_percent": 4.301419340031476,
+              "paired_cpu_change_percent_samples": [
+                20.35490605427974,
+                -1.9603097773475464,
+                7.662399808589582,
+                0.9404388714733702
+              ],
+              "policy": "lru"
+            },
+            {
+              "after_cpu_ms": 8.0965,
+              "after_cpu_ms_samples": [
+                9.347000000000001,
+                7.674,
+                8.519,
+                7.492
+              ],
+              "after_peak_accounted_bytes": 9952,
+              "before_cpu_ms": 7.77225,
+              "before_cpu_ms_samples": [
+                7.7669999999999995,
+                7.7775,
+                7.904,
+                7.502
+              ],
+              "before_peak_accounted_bytes": 9952,
+              "evictions": 64524,
+              "hits": 34632,
+              "miss_rate": 0.6511824664598526,
+              "misses": 64652,
+              "paired_cpu_change_percent": 3.823786329043699,
+              "paired_cpu_change_percent_samples": [
+                20.34247457190681,
+                -1.3307618129218879,
+                7.7808704453441235,
+                -0.13329778725672536
+              ],
+              "policy": "sieve"
+            },
+            {
+              "after_cpu_ms": 8.9555,
+              "after_cpu_ms_samples": [
+                9.975999999999999,
+                8.528500000000001,
+                9.382499999999999,
+                8.307500000000001
+              ],
+              "after_peak_accounted_bytes": 14120,
+              "before_cpu_ms": 10.2655,
+              "before_cpu_ms_samples": [
+                10.267,
+                10.264,
+                10.469,
+                9.9245
+              ],
+              "before_peak_accounted_bytes": 12072,
+              "evictions": 65771,
+              "hits": 33385,
+              "miss_rate": 0.6637423955521534,
+              "misses": 65899,
+              "model_calls": 65771,
+              "model_calls_per_eviction": 1,
+              "paired_cpu_change_percent": -13.335635933040562,
+              "paired_cpu_change_percent_samples": [
+                -2.8343235609233464,
+                -16.90861262665626,
+                -10.378259623650788,
+                -16.293012242430336
+              ],
+              "policy": "always_score",
+              "victim_swaps": 1442
+            },
+            {
+              "after_cpu_ms": 8.83775,
+              "after_cpu_ms_samples": [
+                9.862499999999999,
+                8.403,
+                9.272499999999999,
+                8.185
+              ],
+              "after_peak_accounted_bytes": 14120,
+              "before_cpu_ms": 9.50475,
+              "before_cpu_ms_samples": [
+                9.5125,
+                9.497,
+                9.7235,
+                9.1915
+              ],
+              "before_peak_accounted_bytes": 12072,
+              "evictions": 64384,
+              "hits": 34772,
+              "miss_rate": 0.6497723701704202,
+              "misses": 64512,
+              "model_calls": 38611,
+              "model_calls_per_eviction": 0.5996986829025845,
+              "paired_cpu_change_percent": -7.794291046416163,
+              "paired_cpu_change_percent_samples": [
+                3.6793692509855314,
+                -11.519427187532905,
+                -4.638247544608431,
+                -10.950334548223895
+              ],
+              "policy": "cachetriage",
+              "victim_swaps": 32
+            }
+          ]
+        }
+      ],
+      "source": {
+        "distinct_read_keys": 23803,
+        "operations": {
+          "get": 99284,
+          "set": 716
+        },
+        "read_count": 99284,
+        "read_timestamp_range_seconds": [
+          0,
+          33
+        ],
+        "source_end_row": 100000,
+        "source_file": "cluster024.csv",
+        "source_slice_sha256": "b3c485b69915323d2f026465793f82f791b6ec717c92c6e7cf88ccf553ebabd6",
+        "source_start_row": 1,
+        "source_timestamp_descents": 14
+      },
+      "workload": "Twitter cluster 24"
+    }
+  ]
+}

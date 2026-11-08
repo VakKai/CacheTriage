@@ -1,0 +1,10 @@
+{
+  "capacity_items": 3,
+  "requests": 6,
+  "oracle_lookahead_reads": 2,
+  "results": [
+    {"policy": "lru", "hits": 0, "misses": 6, "evictions": 3, "miss_rate": 1},
+    {"policy": "sieve", "hits": 0, "misses": 6, "evictions": 3, "miss_rate": 1},
+    {"policy": "sieve_oracle", "hits": 2, "misses": 4, "evictions": 1, "miss_rate": 0.66666666666666663, "victim_swaps": 1}
+  ]
+}

@@ -1,0 +1,4 @@
+cachetriage_logistic_v1
+bias -1.7862906613982323
+log1p_age_reads -0.30028012038945257
+log1p_resident_hits 0.54605835035964501

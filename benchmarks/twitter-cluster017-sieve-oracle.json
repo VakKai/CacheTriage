@@ -1,0 +1,51 @@
+{
+  "distinct_read_keys": 24468,
+  "operations": {
+    "add": 96,
+    "cas": 87,
+    "get": 99567,
+    "gets": 101,
+    "set": 149
+  },
+  "read_count": 99668,
+  "read_timestamp_range_seconds": [
+    0,
+    138
+  ],
+  "replays": [
+    {
+      "capacity_items": 128,
+      "oracle_lookahead_reads": 100,
+      "requests": 99668,
+      "results": [
+        {
+          "evictions": 87038,
+          "hits": 12502,
+          "miss_rate": 0.8745635509892844,
+          "misses": 87166,
+          "policy": "lru"
+        },
+        {
+          "evictions": 74639,
+          "hits": 24901,
+          "miss_rate": 0.7501605329694586,
+          "misses": 74767,
+          "policy": "sieve"
+        },
+        {
+          "evictions": 74068,
+          "hits": 25472,
+          "miss_rate": 0.7444315126219048,
+          "misses": 74196,
+          "policy": "sieve_oracle",
+          "victim_swaps": 2221
+        }
+      ]
+    }
+  ],
+  "source_end_row": 100000,
+  "source_file": "cluster017.csv",
+  "source_slice_sha256": "d278aa37edbecf4ddac87529590c69e982a8ab99794b289955c97dee93afc2f6",
+  "source_start_row": 1,
+  "source_timestamp_descents": 0
+}

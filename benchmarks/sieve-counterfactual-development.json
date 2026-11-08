@@ -1,0 +1,161 @@
+{
+  "capacity_items": 128,
+  "horizon_reads": 100,
+  "label": "SIEVE future misses minus alternative future misses; positive favors overriding",
+  "max_samples_per_workload": 1000,
+  "sampling": "midpoint of each equal-count bin of eligible SIEVE evictions",
+  "totals": {
+    "alternative_pairs": 12000,
+    "beneficial_pairs": 642,
+    "decisions_sampled": 4000,
+    "decisions_with_beneficial_alternative": 287,
+    "decisions_with_harmful_alternative": 298,
+    "harmful_pairs": 562,
+    "sum_best_local_misses_saved": 719,
+    "sum_worst_local_extra_misses": 377,
+    "tied_pairs": 10796
+  },
+  "workloads": [
+    {
+      "alternative_pairs": 3000,
+      "beneficial_pairs": 562,
+      "decisions_sampled": 1000,
+      "decisions_with_beneficial_alternative": 252,
+      "decisions_with_harmful_alternative": 257,
+      "eligible_evictions": 22522,
+      "harmful_pairs": 508,
+      "requests": 27671,
+      "source": {
+        "distinct_read_keys": 37538,
+        "operations": {
+          "add": 4423,
+          "cas": 2467,
+          "delete": 860,
+          "get": 89313,
+          "gets": 2923,
+          "set": 14
+        },
+        "read_count": 92236,
+        "read_timestamp_range_seconds": [
+          0,
+          6
+        ],
+        "replay_first_read": 64566,
+        "replay_last_read": 92236,
+        "source_end_row": 100000,
+        "source_file": "cluster052.csv",
+        "source_slice_sha256": "175be9b41c1a116ede41d3d6b44a5f6bccc08e68260971a49b9cf669a48d80cd",
+        "source_start_row": 1,
+        "source_timestamp_descents": 11
+      },
+      "sum_best_local_misses_saved": 680,
+      "sum_worst_local_extra_misses": 330,
+      "tied_pairs": 1930,
+      "workload": "Twitter cluster 52"
+    },
+    {
+      "alternative_pairs": 3000,
+      "beneficial_pairs": 52,
+      "decisions_sampled": 1000,
+      "decisions_with_beneficial_alternative": 21,
+      "decisions_with_harmful_alternative": 18,
+      "eligible_evictions": 72725,
+      "harmful_pairs": 24,
+      "requests": 229690,
+      "source": {
+        "distinct_read_keys": 45031,
+        "download_byte_range": [
+          0,
+          8388607
+        ],
+        "operation_rows": {
+          "DELETE": 964,
+          "GET": 82400,
+          "SET": 16636
+        },
+        "read_count": 229690,
+        "source_end_row": 100000,
+        "source_file": "meta-kv-202206-prefix.csv",
+        "source_slice_sha256": "9c736f9db21175d9b201a1e20051d2c3f206d6c7f67f2f86fc1f8c99e84bfbf9",
+        "source_start_row": 1,
+        "source_url": "https://cachelib-workload-sharing.s3.amazonaws.com/pub/kvcache/202206/kvcache_traces_1.csv"
+      },
+      "sum_best_local_misses_saved": 25,
+      "sum_worst_local_extra_misses": 22,
+      "tied_pairs": 2924,
+      "workload": "Meta KV 202206"
+    },
+    {
+      "alternative_pairs": 3000,
+      "beneficial_pairs": 28,
+      "decisions_sampled": 1000,
+      "decisions_with_beneficial_alternative": 14,
+      "decisions_with_harmful_alternative": 19,
+      "eligible_evictions": 191037,
+      "harmful_pairs": 24,
+      "requests": 200000,
+      "source": {
+        "distinct_read_keys": 152251,
+        "download_byte_range": [
+          0,
+          8388607
+        ],
+        "read_count": 200000,
+        "read_timestamp_range_seconds": [
+          0,
+          114
+        ],
+        "source_end_row": 200000,
+        "source_etag": "cbf34f4c34cf9faeefb8069597012320-8",
+        "source_file": "wiki-upload-2019-prefix.txt",
+        "source_slice_sha256": "8ba19e74386c0df9398027a2a5ae5cadaeba89c19ef28c03f3c36113d80d15d2",
+        "source_start_row": 1,
+        "source_timestamp_descents": 0,
+        "source_url": "https://cache-datasets.s3.amazonaws.com/cache_dataset_txt/2019_wiki/wiki/2019/wiki.upload.2019.short"
+      },
+      "sum_best_local_misses_saved": 14,
+      "sum_worst_local_extra_misses": 20,
+      "tied_pairs": 2948,
+      "workload": "Wikimedia CDN upload 2019"
+    },
+    {
+      "alternative_pairs": 3000,
+      "beneficial_pairs": 0,
+      "decisions_sampled": 1000,
+      "decisions_with_beneficial_alternative": 0,
+      "decisions_with_harmful_alternative": 4,
+      "eligible_evictions": 196097,
+      "harmful_pairs": 6,
+      "requests": 200000,
+      "source": {
+        "distinct_read_keys": 179617,
+        "download_byte_range": [
+          0,
+          8388607
+        ],
+        "object_identity": [
+          "photo_id",
+          "image_format",
+          "size_category"
+        ],
+        "read_count": 200000,
+        "read_timestamp_range": [
+          "20160201164604",
+          "20160201164826"
+        ],
+        "skipped_format_errors": 0,
+        "source_end_row": 200000,
+        "source_etag": "e6bbbf901bcd64a2ff547425b1100cde-8287",
+        "source_file": "tencent-photo1-prefix.zst",
+        "source_slice_sha256": "20b4618695baf896aa0ce96ae673eebdf82a9ced3a508c443a79187f7a24152e",
+        "source_start_row": 1,
+        "source_timestamp_descents": 0,
+        "source_url": "https://cache-datasets.s3.amazonaws.com/cache_dataset_txt/2018_tencentPhoto/tencentPhoto1.sort.zst"
+      },
+      "sum_best_local_misses_saved": 0,
+      "sum_worst_local_extra_misses": 5,
+      "tied_pairs": 2994,
+      "workload": "Tencent QQPhoto"
+    }
+  ]
+}

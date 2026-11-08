@@ -1,0 +1,8 @@
+{
+  "capacity_items": 3,
+  "requests": 8,
+  "results": [
+    {"policy": "lru", "hits": 2, "misses": 6, "evictions": 3, "miss_rate": 0.75},
+    {"policy": "sieve", "hits": 3, "misses": 5, "evictions": 2, "miss_rate": 0.625}
+  ]
+}

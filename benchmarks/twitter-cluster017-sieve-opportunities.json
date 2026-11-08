@@ -1,0 +1,135 @@
+{
+  "distinct_read_keys": 24468,
+  "operations": {
+    "add": 96,
+    "cas": 87,
+    "get": 99567,
+    "gets": 101,
+    "set": 149
+  },
+  "read_count": 99668,
+  "read_timestamp_range_seconds": [
+    0,
+    138
+  ],
+  "replays": [
+    {
+      "capacity_items": 128,
+      "requests": 99668,
+      "results": [
+        {
+          "evictions": 87038,
+          "hits": 12502,
+          "miss_rate": 0.8745635509892844,
+          "misses": 87166,
+          "policy": "lru"
+        },
+        {
+          "evictions": 74639,
+          "hits": 24901,
+          "miss_rate": 0.7501605329694586,
+          "misses": 74767,
+          "policy": "sieve"
+        }
+      ],
+      "sieve_opportunities": {
+        "evaluated_evictions": 74564,
+        "excluded_incomplete_window": 75,
+        "opportunities": 2166,
+        "opportunity_rate": 0.029048870768735583,
+        "total_evictions": 74639,
+        "victim_reused": 2166
+      }
+    },
+    {
+      "capacity_items": 512,
+      "requests": 99668,
+      "results": [
+        {
+          "evictions": 70417,
+          "hits": 28739,
+          "miss_rate": 0.7116526869205763,
+          "misses": 70929,
+          "policy": "lru"
+        },
+        {
+          "evictions": 60049,
+          "hits": 39107,
+          "miss_rate": 0.6076273227114019,
+          "misses": 60561,
+          "policy": "sieve"
+        }
+      ],
+      "sieve_opportunities": {
+        "evaluated_evictions": 59994,
+        "excluded_incomplete_window": 55,
+        "opportunities": 885,
+        "opportunity_rate": 0.014751475147514752,
+        "total_evictions": 60049,
+        "victim_reused": 885
+      }
+    },
+    {
+      "capacity_items": 2048,
+      "requests": 99668,
+      "results": [
+        {
+          "evictions": 48673,
+          "hits": 48947,
+          "miss_rate": 0.5088995464943613,
+          "misses": 50721,
+          "policy": "lru"
+        },
+        {
+          "evictions": 42076,
+          "hits": 55544,
+          "miss_rate": 0.4427097965244612,
+          "misses": 44124,
+          "policy": "sieve"
+        }
+      ],
+      "sieve_opportunities": {
+        "evaluated_evictions": 42036,
+        "excluded_incomplete_window": 40,
+        "opportunities": 234,
+        "opportunity_rate": 0.005566657151013417,
+        "total_evictions": 42076,
+        "victim_reused": 234
+      }
+    },
+    {
+      "capacity_items": 8192,
+      "requests": 99668,
+      "results": [
+        {
+          "evictions": 23368,
+          "hits": 68108,
+          "miss_rate": 0.31665128225709355,
+          "misses": 31560,
+          "policy": "lru"
+        },
+        {
+          "evictions": 21585,
+          "hits": 69891,
+          "miss_rate": 0.29876188947305055,
+          "misses": 29777,
+          "policy": "sieve"
+        }
+      ],
+      "sieve_opportunities": {
+        "evaluated_evictions": 21560,
+        "excluded_incomplete_window": 25,
+        "opportunities": 20,
+        "opportunity_rate": 0.0009276437847866419,
+        "total_evictions": 21585,
+        "victim_reused": 20
+      }
+    }
+  ],
+  "sieve_lookahead_reads": 100,
+  "source_end_row": 100000,
+  "source_file": "cluster017.csv",
+  "source_slice_sha256": "d278aa37edbecf4ddac87529590c69e982a8ab99794b289955c97dee93afc2f6",
+  "source_start_row": 1,
+  "source_timestamp_descents": 0
+}
